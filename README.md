@@ -7,3 +7,14 @@ They are commonly used for storing user preferences or preserving a state of a u
 implicitly by using various utilities.
 
 _Wikipedia_
+
+
+---
+
+## Tmux
+
+### Installing Plugins
+
+Plugins are managed by [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm).
+
+Initialize new plugins by running `prefix + I`.
