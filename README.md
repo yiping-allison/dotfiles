@@ -18,3 +18,8 @@ _Wikipedia_
 Plugins are managed by [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm).
 
 Initialize new plugins by running `prefix + I`.
+
+
+## Wezterm
+
+[Wezterm](https://wezfurlong.org/wezterm/index.html) is a cross-platform terminal emulator and multiplexer.

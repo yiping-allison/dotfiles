@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 local mux = wezterm.mux
 local config = wezterm.config_builder()
 
-config.color_scheme = "Gruvbox dark, pale (base16)"
+config.color_scheme = 'Gruvbox dark, pale (base16)'
 config.inactive_pane_hsb = {
     hue = 0.5,
     saturation = 0.5,
@@ -21,7 +21,7 @@ config.keys = {
     {
         key = '|',
         mods = 'LEADER|SHIFT',
-        action = wezterm.action { SplitHorizontal={domain="CurrentPaneDomain"} },
+        action = wezterm.action { SplitHorizontal={domain='CurrentPaneDomain'} },
     },
     -- Split pane
     -- pane 1
@@ -30,7 +30,7 @@ config.keys = {
     {
         key = '-',
         mods = 'LEADER',
-        action = wezterm.action { SplitVertical={domain="CurrentPaneDomain"} },
+        action = wezterm.action { SplitVertical={domain='CurrentPaneDomain'} },
     },
 
     -- Switch to new or existing workspace
@@ -60,10 +60,10 @@ config.keys = {
     },
 
     -- Move between panes
-    { key = "h", mods = "LEADER", action=wezterm.action{ActivatePaneDirection="Left"} },
-    { key = "j", mods = "LEADER", action=wezterm.action{ActivatePaneDirection="Down"} },
-    { key = "k", mods = "LEADER", action=wezterm.action{ActivatePaneDirection="Up"} },
-    { key = "l", mods = "LEADER", action=wezterm.action{ActivatePaneDirection="Right"} },
+    { key = 'h', mods = 'LEADER', action=wezterm.action{ActivatePaneDirection='Left'} },
+    { key = 'j', mods = 'LEADER', action=wezterm.action{ActivatePaneDirection='Down'} },
+    { key = 'k', mods = 'LEADER', action=wezterm.action{ActivatePaneDirection='Up'} },
+    { key = 'l', mods = 'LEADER', action=wezterm.action{ActivatePaneDirection='Right'} },
 
     -- Mpve between workspaces
     { key = 'n', mods = 'CTRL', action = wezterm.action.SwitchWorkspaceRelative(1) },
@@ -71,32 +71,34 @@ config.keys = {
 
 
     -- Copy and paste from clipboard
-    { key ="p",  mods="LEADER", action=wezterm.action.PasteFrom 'Clipboard' },
-    { key ="y",  mods="LEADER", action=wezterm.action.CopyTo 'Clipboard' },
+    { key ='p',  mods='LEADER', action=wezterm.action.PasteFrom 'Clipboard' },
+    { key ='y',  mods='LEADER', action=wezterm.action.CopyTo 'Clipboard' },
 
     -- Font sizing
-    { key = "+", mods = "CTRL", action=wezterm.action.IncreaseFontSize },
-    { key = "-", mods = "CTRL", action=wezterm.action.DecreaseFontSize },
-    { key = "0", mods = "CTRL", action=wezterm.action.ResetFontSize },
+    { key = '+', mods = 'CTRL', action=wezterm.action.IncreaseFontSize },
+    { key = '-', mods = 'CTRL', action=wezterm.action.DecreaseFontSize },
+    { key = '0', mods = 'CTRL', action=wezterm.action.ResetFontSize },
 }
 
 -- On first startup
 wezterm.on('gui-startup', function(cmd)
     -- Allow startup args if present.
     -- `wezterm start -- something`
-    local uargs = {}
+    local args = {}
     if cmd then
-        uargs = cmd.args
+        args = cmd.args
     else
-        -- TODO: Add macOS support
         -- Auto-set shell based on machine
         if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-            uargs = { 'powershell.exe', '-NoLogo' }
+            args = { 'powershell.exe', '-NoLogo' }
+        else
+            -- Assume anything else just uses zsh
+            args = { '/bin/zsh' }
         end
     end
 
     -- Set default workspace
-    local tab, pane, window = mux.spawn_window{args=uargs}
+    local tab, pane, window = mux.spawn_window{args=args}
     window:gui_window():maximize()
 end)
 
@@ -115,11 +117,11 @@ wezterm.on('update-right-status', function(window, pane)
     })
 end)
 
--- TODO: Add macOS support
--- TODO: Look into getting the helper file working in order to set default programs across GUI startup and default panes
 -- Defaults for additional panes and windows
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-    config.default_prog = {"powershell.exe", "-NoLogo"}
+    config.default_prog = { 'powershell.exe', '-NoLogo' }
+else
+    args = { '/bin/zsh' }
 end
 
 return config
