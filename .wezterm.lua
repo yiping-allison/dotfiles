@@ -67,7 +67,7 @@ config.keys = {
 
     -- Mpve between workspaces
     { key = 'n', mods = 'CTRL', action = wezterm.action.SwitchWorkspaceRelative(1) },
-    { key = 'p', mods = 'CTRL', action = wezterm.action.SwitchWorkspaceRelative(-1) },
+    { key = 'b', mods = 'CTRL', action = wezterm.action.SwitchWorkspaceRelative(-1) },
 
 
     -- Copy and paste from clipboard
