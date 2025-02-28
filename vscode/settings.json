@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Material Theme Palenight",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
   "editor.fontFamily": "'FiraCode Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
   "security.workspace.trust.untrustedFiles": "open",
@@ -23,11 +23,11 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
+    "editor.tabSize": 4
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
+    "editor.tabSize": 4
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -42,7 +42,19 @@
     "editor.tabSize": 2
   },
   "git.openRepositoryInParentFolders": "never",
-  "workbench.iconTheme": "eq-material-theme-icons-light",
+  "workbench.iconTheme": "material-icon-theme",
 
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
+  "aws.telemetry": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "anyscalecompute.ray-distributed-debugger.initialized": true,
+  "anyscalecompute.ray-distributed-debugger.clusterDashboards": [
+    {
+      "host": "127.0.0.1:8265",
+      "localRoot": "${workspaceFolder}"
+    }
+  ],
+  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme"
 }
