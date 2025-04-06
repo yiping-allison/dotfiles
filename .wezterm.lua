@@ -3,11 +3,13 @@ local wezterm = require 'wezterm'
 local mux = wezterm.mux
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Gruvbox dark, pale (base16)'
+config.color_scheme = 'catppuccin-macchiato'
+config.window_background_opacity = 0.9
+config.enable_tab_bar = false
 config.inactive_pane_hsb = {
-    hue = 0.5,
-    saturation = 0.5,
-    brightness = 0.6,
+    hue = 0.9,
+    saturation = 0.7,
+    brightness = 0.8,
 }
 config.font_size = 10.0
 

@@ -1,5 +1,15 @@
 {
-  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  // Theme settings
+  // See https://github.com/catppuccin/vscode.
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "editor.semanticHighlighting.enabled": true,
+  "terminal.integrated.minimumContrastRatio": 1,
+  "window.titleBarStyle": "custom",
+  "gopls": {
+    "ui.semanticHighlighting": true
+  },
+  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+
   "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
   "editor.fontFamily": "'FiraCode Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
   "security.workspace.trust.untrustedFiles": "open",
@@ -48,13 +58,5 @@
   "aws.telemetry": false,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "anyscalecompute.ray-distributed-debugger.initialized": true,
-  "anyscalecompute.ray-distributed-debugger.clusterDashboards": [
-    {
-      "host": "127.0.0.1:8265",
-      "localRoot": "${workspaceFolder}"
-    }
-  ],
-  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme"
+  }
 }

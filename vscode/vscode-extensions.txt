@@ -1,7 +1,6 @@
 4ops.terraform
 aaron-bond.better-comments
 amazonwebservices.aws-toolkit-vscode
-anyscalecompute.ray-distributed-debugger
 atommaterial.a-file-icon-vscode
 eamodio.gitlens
 editorconfig.editorconfig
@@ -15,7 +14,6 @@ graphql.vscode-graphql-syntax
 hashicorp.hcl
 hashicorp.terraform
 inferrinizzard.prettier-sql-vscode
-kleber-swf.ocean-dark-extended
 mikestead.dotenv
 mindaro-dev.file-downloader
 mquandalle.graphql
@@ -29,7 +27,6 @@ ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode.makefile-tools
 ms-vscode.remote-explorer
-pkief.material-icon-theme
 remisa.mathover
 rust-lang.rust-analyzer
 streetsidesoftware.code-spell-checker
