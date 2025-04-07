@@ -15,6 +15,17 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 # Use modern completion system
+# Init Linuxbrew, which adds environment variables
+# ! NOTE: We need to do it beforehand to add `just` completions
+eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+fpath[1,0]="/home/linuxbrew/.linuxbrew/share/zsh/site-functions";
+export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 autoload -Uz compinit
 compinit
 
@@ -35,13 +46,6 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
-export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
-export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
-fpath[1,0]="/home/linuxbrew/.linuxbrew/share/zsh/site-functions";
-export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
-[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
-export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 
 # Aliases
 alias gl='git log --oneline'
@@ -51,9 +55,7 @@ alias ga='git add .'
 alias gc='git commit'
 alias pn=pnpm
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(oh-my-posh init --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/catppuccin.omp.json' zsh)"
-
 
 export PATH=$HOME/.local/bin:$PATH
 
