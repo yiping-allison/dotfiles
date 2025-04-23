@@ -55,7 +55,7 @@ alias ga='git add .'
 alias gc='git commit'
 alias pn=pnpm
 
-eval "$(oh-my-posh init --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/catppuccin.omp.json' zsh)"
+eval "$(oh-my-posh init --config $HOME/system/oh-my-posh/catppuccin.omp.json zsh)"
 
 export PATH=$HOME/.local/bin:$PATH
 
@@ -67,9 +67,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-# pyenv end
-#
+
+# Turso
+export PATH="$PATH:/home/allison/.turso"
+# Turso end
