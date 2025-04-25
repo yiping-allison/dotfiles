@@ -5,7 +5,9 @@ local config = wezterm.config_builder()
 
 config.color_scheme = 'catppuccin-macchiato'
 config.window_background_opacity = 0.9
+
 config.enable_tab_bar = false
+
 config.inactive_pane_hsb = {
     hue = 0.9,
     saturation = 0.7,
@@ -95,35 +97,20 @@ wezterm.on('gui-startup', function(cmd)
             args = { 'powershell.exe', '-NoLogo' }
         else
             -- Assume anything else just uses zsh
-            args = { '/bin/zsh' }
+            args = { '/bin/zsh', '-l' }
         end
     end
 
     -- Set default workspace
     local tab, pane, window = mux.spawn_window{args=args}
-    window:gui_window():maximize()
-end)
-
-wezterm.on('update-right-status', function(window, pane)
-    local date = wezterm.strftime '%Y-%m-%d %H:%M:%S'
-
-    -- Make it italic and underlined
-    window:set_right_status(wezterm.format {
-        { Attribute = { Underline = 'Single' } },
-        { Attribute = { Italic = true } },
-        { Attribute = { Intensity = 'Bold' } },
-        { Foreground = { AnsiColor = 'Fuchsia' } },
-        { Text = window:active_workspace() },
-        { Text = '   ' },
-        { Text = date },
-    })
+    window:gui_window()
 end)
 
 -- Defaults for additional panes and windows
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.default_prog = { 'powershell.exe', '-NoLogo' }
 else
-    args = { '/bin/zsh' }
+    args = { '/bin/zsh', '-l' }
 end
 
 return config
