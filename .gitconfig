@@ -3,3 +3,5 @@
 	name = Yiping (Allison)
 [core]
 	editor = nvim
+[push]
+	autoSetupRemote = true
