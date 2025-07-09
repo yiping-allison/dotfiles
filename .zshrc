@@ -53,6 +53,8 @@ alias gs='git status'
 alias gap='git add -p'
 alias ga='git add .'
 alias gc='git commit'
+alias gco='git checkout'
+alias gd='git diff'
 alias pn=pnpm
 
 eval "$(oh-my-posh init --config $HOME/system/oh-my-posh/catppuccin.omp.json zsh)"
