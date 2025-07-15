@@ -5,3 +5,9 @@
 	editor = nvim
 [push]
 	autoSetupRemote = true
+[fetch]
+	prune = true
+[branch]
+	sort = -committerdate
+[alias]
+	sync = !git switch main && git pull --prune && git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
