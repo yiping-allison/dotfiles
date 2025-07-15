@@ -47,19 +47,34 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# Aliases
-alias gl='git log --oneline'
+# aliases
+alias gl='git log --graph --pretty=format:"%C(yellow)%H%Creset%nAuthor: %C(bold blue)%an <%ae>%Creset%nDate:   %C(green)%ad%Creset%n%n    %s%n" --date=iso'
 alias gs='git status'
 alias gap='git add -p'
 alias ga='git add .'
 alias gc='git commit'
 alias gco='git checkout'
 alias gd='git diff'
+alias gb='git branch'
 alias pn=pnpm
+# aliases end
 
+# oh my posh
 eval "$(oh-my-posh init --config $HOME/system/oh-my-posh/catppuccin.omp.json zsh)"
+# oh my posh end
 
+# local bin
 export PATH=$HOME/.local/bin:$PATH
+# local bin end
+
+# go
+export PATH=$PATH:/usr/local/go/bin
+# go end
+
+# java
+export JAVA_HOME="/usr/lib/jvm/jdk-21.0.7+6"
+export PATH="$PATH:$JAVA_HOME/bin"
+# java end
 
 # pnpm
 export PNPM_HOME="/home/allison/.local/share/pnpm"
