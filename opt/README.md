@@ -23,7 +23,8 @@ Instructions for manually installing apps (because flatpak versions are breaking
 >
 > `usr/share/icons/Papirus`
 
-> [!NOTE] > `StartupWMClass=zen` is needed in order to resolve the app's instance window with a custom launcher icon.
+> [!NOTE]
+> `StartupWMClass=zen` is needed in order to resolve the app's instance window with a custom launcher icon.
 > Use `xprop | grep WM_CLASS` (on X11 systems) and click on the Zen browser window to view the name.
 >
 > ```sh
