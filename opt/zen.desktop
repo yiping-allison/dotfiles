@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Zen
+Icon=zen-browser
+Comment=Minimalist web browser
+Exec=zen
+Terminal=false
+Type=Application
+StartupWMClass=zen
+Categories=Network;WebBrowser;
