@@ -1,3 +1,5 @@
+## File Locations
+
 |          File          |           Destination            |
 | :--------------------: | :------------------------------: |
 |     `niri.service`     |       `/etc/systemd/user/`       |
