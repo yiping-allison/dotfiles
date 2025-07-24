@@ -2,6 +2,10 @@ Instructions for manually installing apps (because flatpak versions are breaking
 
 ## Zen Browser
 
+> [!TIP]
+> You only need to install Zen manually if you're on an NVIDIA card (graphics connection issue in logs).
+> Flatpak version is working fine on my non-NVIDIA machine.
+
 1.  Install Zen browser manually from the [website](https://zen-browser.app/download/).
 2.  Extract files, etc.
 3.  Move the extracted files into the directory you want.
@@ -18,7 +22,7 @@ Instructions for manually installing apps (because flatpak versions are breaking
     ```
 
 > [!NOTE]
-> Use `Icon=zen-browser` if Papirus is installed. If you need to verify the icon name, you can view them by traversing the Papirus icon
+> Use `Icon=zen-browser` if [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) is installed. If you need to verify the icon name, you can view them by traversing the Papirus icon
 > directory.
 >
 > `usr/share/icons/Papirus`
@@ -32,3 +36,5 @@ Instructions for manually installing apps (because flatpak versions are breaking
 > ```
 >
 > You want the second string.
+>
+> Also keep in mind that this is compatible with running through Wayland as well since the browser is dependent on X11 anyways.
