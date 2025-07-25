@@ -7,6 +7,7 @@
 * {
   font-family: FiraCode Nerd Font Mono;
   font-size: 14px;
+  font-weight: bold;
   min-height: 0;
 }
 
@@ -44,6 +45,7 @@
 #clock,
 #battery,
 #pulseaudio,
+#privacy,
 #custom-lock,
 #custom-power {
   background-color: @surface0;
@@ -70,11 +72,6 @@
 
 #backlight {
   color: @yellow;
-  border-radius: 0px 1rem 1rem 0px;
-}
-
-#battery {
-  border-radius: 0;
 }
 
 #pulseaudio {
@@ -84,17 +81,18 @@
 }
 
 #custom-lock {
-  border-radius: 1rem 0px 0px 1rem;
-  color: @lavender;
-}
-
-#custom-power {
-  margin-right: 1rem;
   border-radius: 0px 1rem 1rem 0px;
-  color: @red;
+  color: @lavender;
+  margin-right: 1rem;
 }
 
 #tray {
   margin-right: 1rem;
   border-radius: 1rem;
+}
+
+#custom-power {
+  border-radius: 1rem;
+  color: @red;
+  margin-right: 1rem;
 }

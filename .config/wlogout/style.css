@@ -2,6 +2,7 @@
 * Modified from various sources, including:
 * - https://github.com/mylinuxforwork/dotfiles/tree/main/dotfiles/.config/wlogout
 * - https://github.com/catppuccin/wlogout/tree/main
+* - https://github.com/HyDE-Project/HyDE/blob/master/Configs/.local/lib/hyde/logoutlaunch.sh
 */
 @import "lavender.css";
 
@@ -61,6 +62,7 @@ button span {
 
 #suspend {
   margin: 10px;
+  margin-left: 155px; // FIXME: Wrap this in a script so we can apply dynamically
   border-radius: 15px;
   background-image: image(url("icons/suspend.svg"));
 }
@@ -73,6 +75,7 @@ button span {
 
 #reboot {
   margin: 10px;
+  margin-left: 155px; // FIXME: Wrap this in a script so we can apply dynamically
   border-radius: 15px;
   background-image: image(url("icons/reboot.svg"));
 }

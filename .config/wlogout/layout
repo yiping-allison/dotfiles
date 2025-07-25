@@ -1,6 +1,6 @@
 {
   "label": "suspend",
-  "action": "systemctl hibernate",
+  "action": "systemctl suspend",
   "text": "Suspend",
   "keybind": "u"
 }
@@ -10,13 +10,6 @@
   "text": "Reboot",
   "keybind": "r"
 }
-{
-  "label": "lock",
-  "action": "",
-  "text": "",
-  "keybind": "l"
-}
-
 {
   "label": "logout",
   "action": "niri msg quit",
@@ -29,9 +22,16 @@
   "text": "Shutdown",
   "keybind": "s"
 }
+
 {
   "label": "hibernate",
   "action": "",
   "text": "",
   "keybind": "h"
+}
+{
+  "label": "lock",
+  "action": "",
+  "text": "",
+  "keybind": "l"
 }

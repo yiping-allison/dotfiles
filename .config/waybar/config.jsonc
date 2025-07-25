@@ -10,6 +10,7 @@
     "pulseaudio",
     "battery",
     "backlight",
+    "privacy",
     "tray",
     "custom/lock",
     "custom/power"
@@ -62,19 +63,47 @@
     "format": "{icon} {percentage}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
-  "tray": {
-    "icon-size": 15, // size of icons in the tray
-    "spacing": 10
+  "privacy": {
+    "icon-spacing": 10,
+    "icon-size": 20,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      }
+    ],
+    "ignore-monitor": true
   },
   "custom/lock": {
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; swaylock)'",
+    "icon-size": 20,
     "format": "{icon}",
     "format-icons": ""
   },
+
+  "tray": {
+    "icon-size": 20, // size of icons in the tray
+    "spacing": 10
+  },
+
   "custom/power": {
     "tooltip": false,
-    "on-click": "wlogout --buttons-per-row 2 -n",
-    "format": ""
+    "on-click": "wlogout -n",
+    "format": "{icon}",
+    "format-icons": "",
+    "icon-size": 20
   }
 }
