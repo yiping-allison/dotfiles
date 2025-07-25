@@ -1,0 +1,28 @@
+// https://github.com/Alexays/Waybar/wiki/Configuration
+{
+  "layer": "top", // on top of windows or behind
+  "position": "top", // top of screen
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray"],
+
+  "clock": {
+    "format": "{:%B %d, %OI:%OM %p}",
+    "locale": "en_US.UTF-8", // locale for date formatting
+    // "format-alt": "{:%A, %B %d}",
+    "timezone": "America/Los_Angeles",
+    "max-length": 25
+  },
+  "tray": {
+    "icon-size": 15, // size of icons in the tray
+    "spacing": 10
+  },
+  "niri/workspaces": {
+    "all-outputs": true, // show all outputs
+    "format": "{icon}",
+    "format-icons": {
+        "active": "",
+        "default": "󰈙" // default icon for workspaces
+    }
+  }
+}

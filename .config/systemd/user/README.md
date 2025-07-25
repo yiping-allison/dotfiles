@@ -4,17 +4,18 @@
 
 ### `apt`
 
-- waybar
 - swayidle
 - swaybg
 - policykit-1-gnome (gnome-polkit-agent)
 - libnotify-bin (mako dependency)
+- waybar* (we will be replacing this binary)
 
 ### Pre-built binaries
 
 - [`niri`](../../../bin/niri/)
 - [`mako`](../../../bin/)
 - [`xwayland-satellite`](../../../bin/)
+- [`waybar`](../../../bin/)
 
 ## Symlinks
 
