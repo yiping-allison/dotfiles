@@ -68,7 +68,7 @@
   //   },
   "custom/lock": {
     "tooltip": false,
-    "on-click": "sh -c '(sleep 0.5s; swaylock -f)'",
+    "on-click": "sh -c '(sleep 0.5s; swaylock)'",
     "format": "{icon}",
     "format-icons": ""
   },

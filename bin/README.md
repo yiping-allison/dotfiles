@@ -19,7 +19,8 @@ tar -xvf {PROGRAM}.tar.xz
 > [!TIP]
 > `waybar` resides in `/usr/bin/`.
 
-> [!IMPORTANT] > `waybar` provides its own `systemd` file upon installation. Since we are overriding the existing waybar binary, we don't have to provide a new or updated version.
+> [!IMPORTANT]
+> `waybar` provides its own `systemd` file upon installation. Since we are overriding the existing waybar binary, we don't have to provide a new or updated version.
 > If you, however, didn't pre-install waybar, you can create it using the following:
 >
 > ```md
