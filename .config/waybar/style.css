@@ -1,3 +1,7 @@
+/*
+* Modified version from https://github.com/rubyowo/dotfiles/blob/f925cf8e3461420a21b6dc8b8ad1190107b0cc56/config/waybar/config
+* Icons from: https://www.nerdfonts.com/cheat-sheet 
+*/
 @import "mocha.css";
 
 * {
@@ -49,8 +53,7 @@
 
 #clock {
   color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+  border-radius: 1rem;
 }
 
 #battery {
@@ -67,9 +70,9 @@
 
 #backlight {
   color: @yellow;
+  border-radius: 0px 1rem 1rem 0px;
 }
 
-#backlight,
 #battery {
   border-radius: 0;
 }

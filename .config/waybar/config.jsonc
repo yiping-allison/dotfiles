@@ -4,25 +4,69 @@
   "position": "top", // top of screen
   "modules-left": ["niri/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["tray"],
+  // ! NOTE: The order here matters! We have some static styling that assumes pulseaudio is first and backlight is last.
+  // ! This is so we can style the rounded bar corners consistently.
+  "modules-right": ["pulseaudio", "battery", "backlight", "tray"],
 
+  // left
+  "niri/workspaces": {
+    "all-outputs": false, // show all outputs
+    "disable-scroll": true, // disable scrolling through workspaces
+    "format": "{index}"
+  },
+
+  // center
   "clock": {
+    "interval": 30,
     "format": "{:%B %d, %OI:%OM %p}",
     "locale": "en_US.UTF-8", // locale for date formatting
-    // "format-alt": "{:%A, %B %d}",
     "timezone": "America/Los_Angeles",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 1,
+      "on-scroll": 1
+    }
+  },
+
+  // right
+  /// `pactl info`
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "",
+    "format-icons": ["", "", "", "", ""],
     "max-length": 25
   },
+  "backlight": {
+    "device": "intel_backlight", // specify the backlight device
+    "format": "{icon} {percentage}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  //   "custom/power": {
+  //     "tooltip": false,
+  //     "on-click": "sh -c '(sleep 0.5s; systemctl poweroff)' & disown",
+  //     "format": ""
+  //   },
+  //   "custom/lock": {
+  //     "tooltip": false,
+  //     "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+  //     "format": ""
+  //   },
   "tray": {
     "icon-size": 15, // size of icons in the tray
     "spacing": 10
-  },
-  "niri/workspaces": {
-    "all-outputs": true, // show all outputs
-    "format": "{icon}",
-    "format-icons": {
-        "active": "",
-        "default": "󰈙" // default icon for workspaces
-    }
   }
 }
