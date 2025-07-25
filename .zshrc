@@ -60,7 +60,7 @@ alias pn=pnpm
 # aliases end
 
 # oh my posh
-eval "$(oh-my-posh init --config $HOME/system/oh-my-posh/catppuccin.omp.json zsh)"
+eval "$(oh-my-posh init --config $HOME/.config/oh-my-posh/catppuccin.omp.json zsh)"
 # oh my posh end
 
 # local bin

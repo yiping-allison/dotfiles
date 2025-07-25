@@ -1,0 +1,37 @@
+{
+  "label": "suspend",
+  "action": "systemctl suspend",
+  "text": "Suspend",
+  "keybind": "u"
+}
+{
+  "label": "reboot",
+  "action": "systemctl reboot",
+  "text": "Reboot",
+  "keybind": "r"
+}
+{
+  "label": "logout",
+  "action": "niri msg action quit",
+  "text": "Logout",
+  "keybind": "e"
+}
+{
+  "label": "shutdown",
+  "action": "systemctl poweroff",
+  "text": "Shutdown",
+  "keybind": "s"
+}
+
+{
+  "label": "hibernate",
+  "action": "",
+  "text": "",
+  "keybind": "h"
+}
+{
+  "label": "lock",
+  "action": "",
+  "text": "",
+  "keybind": "l"
+}

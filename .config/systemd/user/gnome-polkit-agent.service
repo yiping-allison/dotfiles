@@ -1,0 +1,10 @@
+[Unit]
+Description=Authentication agent
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+

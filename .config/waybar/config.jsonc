@@ -1,0 +1,109 @@
+// https://github.com/Alexays/Waybar/wiki/Configuration
+{
+  "layer": "top", // on top of windows or behind
+  "position": "top", // top of screen
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["clock"],
+  // ! NOTE: The order here matters! We have some static styling that assumes pulseaudio is first and custom/lock is last.
+  // ! This is so we can style the rounded bar corners consistently.
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "backlight",
+    "privacy",
+    "custom/lock",
+    "tray",
+    "custom/power"
+  ],
+
+  // left
+  "niri/workspaces": {
+    "all-outputs": false, // show all outputs
+    "disable-scroll": true, // disable scrolling through workspaces
+    "format": "{index}"
+  },
+
+  // center
+  "clock": {
+    "interval": 30,
+    "format": "{:%B %d, %OI:%OM %p}",
+    "locale": "en_US.UTF-8", // locale for date formatting
+    "timezone": "America/Los_Angeles",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 1,
+      "on-scroll": 1
+    }
+  },
+
+  // right
+  /// `pactl info`
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "backlight": {
+    "device": "intel_backlight", // specify the backlight device
+    "format": "{icon} {percentage}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "privacy": {
+    "icon-spacing": 10,
+    "icon-size": 20,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      }
+    ],
+    "ignore-monitor": true
+  },
+  "custom/lock": {
+    "tooltip": false,
+    "on-click": "sh -c '(sleep 0.5s; swaylock)'",
+    "icon-size": 20,
+    "format": "{icon}",
+    "format-icons": ""
+  },
+
+  "tray": {
+    "icon-size": 20, // size of icons in the tray
+    "spacing": 10
+  },
+
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -n",
+    "format": "{icon}",
+    "format-icons": "",
+    "icon-size": 20
+  }
+}

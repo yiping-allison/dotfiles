@@ -49,3 +49,7 @@ cat {FILE_PATH} | xargs -n 1 code --install-extension
 
 cat vscode-extensions.txt | xargs -n 1 code --install-extension
 ```
+
+## Man Pages
+
+[Man pages](https://www.mankier.com/) on the web.
