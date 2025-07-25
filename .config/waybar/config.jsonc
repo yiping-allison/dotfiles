@@ -11,7 +11,8 @@
     "battery",
     "backlight",
     "tray",
-    "custom/lock"
+    "custom/lock",
+    "custom/power"
   ],
 
   // left
@@ -61,19 +62,19 @@
     "format": "{icon} {percentage}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
-  //   "custom/power": {
-  //     "tooltip": false,
-  //     "on-click": "sh -c '(sleep 0.5s; systemctl poweroff)' & disown",
-  //     "format": ""
-  //   },
+  "tray": {
+    "icon-size": 15, // size of icons in the tray
+    "spacing": 10
+  },
   "custom/lock": {
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; swaylock)'",
     "format": "{icon}",
     "format-icons": ""
   },
-  "tray": {
-    "icon-size": 15, // size of icons in the tray
-    "spacing": 10
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout --buttons-per-row 2 -n",
+    "format": ""
   }
 }

@@ -1,0 +1,93 @@
+/**
+* Modified from various sources, including:
+* - https://github.com/mylinuxforwork/dotfiles/tree/main/dotfiles/.config/wlogout
+* - https://github.com/catppuccin/wlogout/tree/main
+*/
+@import "lavender.css";
+
+* {
+  font-family: "FiraCode Nerd Font Mono";
+  transition: 20ms;
+  background-image: none;
+  box-shadow: none;
+}
+
+window {
+  font-size: 16px;
+  background-color: @window-bg;
+}
+
+button {
+  min-height: 200px;
+  min-width: 200px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @button-border;
+  text-decoration-color: @button-text;
+  color: @button-text;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+  background-color: @button-bg;
+  animation: gradient_f 20s ease-in infinite;
+  border-radius: 80px;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682),
+    box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+button:focus,
+button:hover,
+button:active {
+  background-color: @button-focus;
+  color: @button-text;
+  border: 0px;
+  outline-style: none;
+  opacity: 0.8;
+}
+
+button span {
+  font-size: 1.2em;
+}
+
+#logout {
+  margin: 10px;
+  border-radius: 15px;
+  background-image: image(url("icons/logout.svg"));
+}
+
+#suspend {
+  margin: 10px;
+  border-radius: 15px;
+  background-image: image(url("icons/suspend.svg"));
+}
+
+#shutdown {
+  margin: 10px;
+  border-radius: 15px;
+  background-image: image(url("icons/shutdown.svg"));
+}
+
+#reboot {
+  margin: 10px;
+  border-radius: 15px;
+  background-image: image(url("icons/reboot.svg"));
+}
+
+/* Disabled */
+#hibernate,
+#lock {
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: transparent;
+  background-size: 0%;
+  border: none;
+  border-radius: 0;
+}
