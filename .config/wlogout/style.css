@@ -60,9 +60,10 @@ button span {
   background-image: image(url("icons/logout.svg"));
 }
 
+/* FIXME: Wrap this in a script so we can apply dynamically */
 #suspend {
   margin: 10px;
-  margin-left: 155px; // FIXME: Wrap this in a script so we can apply dynamically
+  margin-left: 155px;
   border-radius: 15px;
   background-image: image(url("icons/suspend.svg"));
 }
@@ -73,9 +74,10 @@ button span {
   background-image: image(url("icons/shutdown.svg"));
 }
 
+/* FIXME: Wrap this in a script so we can apply dynamically */
 #reboot {
   margin: 10px;
-  margin-left: 155px; // FIXME: Wrap this in a script so we can apply dynamically
+  margin-left: 155px;
   border-radius: 15px;
   background-image: image(url("icons/reboot.svg"));
 }
