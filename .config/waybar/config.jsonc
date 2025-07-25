@@ -4,15 +4,15 @@
   "position": "top", // top of screen
   "modules-left": ["niri/workspaces"],
   "modules-center": ["clock"],
-  // ! NOTE: The order here matters! We have some static styling that assumes pulseaudio is first and backlight is last.
+  // ! NOTE: The order here matters! We have some static styling that assumes pulseaudio is first and custom/lock is last.
   // ! This is so we can style the rounded bar corners consistently.
   "modules-right": [
     "pulseaudio",
     "battery",
     "backlight",
     "privacy",
-    "tray",
     "custom/lock",
+    "tray",
     "custom/power"
   ],
 
