@@ -6,7 +6,13 @@
   "modules-center": ["clock"],
   // ! NOTE: The order here matters! We have some static styling that assumes pulseaudio is first and backlight is last.
   // ! This is so we can style the rounded bar corners consistently.
-  "modules-right": ["pulseaudio", "battery", "backlight", "tray"],
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "backlight",
+    "tray",
+    "custom/lock"
+  ],
 
   // left
   "niri/workspaces": {
@@ -60,11 +66,12 @@
   //     "on-click": "sh -c '(sleep 0.5s; systemctl poweroff)' & disown",
   //     "format": ""
   //   },
-  //   "custom/lock": {
-  //     "tooltip": false,
-  //     "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
-  //     "format": ""
-  //   },
+  "custom/lock": {
+    "tooltip": false,
+    "on-click": "sh -c '(sleep 0.5s; swaylock -f)'",
+    "format": "{icon}",
+    "format-icons": ""
+  },
   "tray": {
     "icon-size": 15, // size of icons in the tray
     "spacing": 10

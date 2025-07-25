@@ -6,4 +6,3 @@ Requisite=graphical-session.target
 [Service]
 ExecStart=/usr/bin/swaybg -m fill -i "%h/Pictures/wallpapers/david-becker-cIffDN_GqoA-unsplash.jpg"
 Restart=on-failure
-
