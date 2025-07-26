@@ -66,9 +66,7 @@ input {
 environment {
     // This is to enable X11 apps to work; this port may not be correct depending on where xwayland-satellite is launched.
     // You can check by `systemctl --user status xwayland-satellite`.
-    DISPLAY ":1"
-
-    XDG_CURRENT_DESKTOP "Unity"
+    DISPLAY ":0"
 }
 
 // You can configure outputs by their name, which you can find
@@ -76,6 +74,15 @@ environment {
 // The built-in laptop monitor is usually called "eDP-1".
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+
+output "eDP-1" {
+    focus-at-startup
+
+    mode "1920x1200@60.003"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}
 
 // NOTE: Don't actually uncomment. Leaving it here for reference.
 // Remember to uncomment the node by removing "/-"!
