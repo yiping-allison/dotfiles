@@ -20,6 +20,16 @@ sudo apt install gnome-session
 
 This will allow you to choose what type of session you want to log into via GDM (Gnome Display Manager).
 
+Then, allow the GDM to use Wayland.
+
+```sh
+sudo vi /etc/gdm3/custom.conf
+```
+
+```sh
+WaylandEnable=true
+```
+
 ## Tmux
 
 ### Installing Plugins
