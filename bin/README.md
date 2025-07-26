@@ -14,7 +14,7 @@ tar -xvf {PROGRAM}.tar.xz
 ```
 
 > [!TIP]
-> `fuzzel`, `mako`, `makoctl`, `swaylock`, and `xwayland-satellite` reside in `/usr/local/bin/`.
+> `mako`, `makoctl`, `swaylock`, and `xwayland-satellite` reside in `/usr/local/bin/`.
 
 > [!TIP]
 > `waybar` resides in `/usr/bin/`.

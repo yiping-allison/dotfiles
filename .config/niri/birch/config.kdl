@@ -33,7 +33,7 @@ input {
         natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
-        // scroll-method "two-finger"
+        scroll-method "two-finger"
         // disabled-on-external-mouse
     }
 
@@ -358,7 +358,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: wezterm" { spawn "flatpak" "run" "org.wezfurlong.wezterm"; }
+    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -372,6 +372,11 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    // Brightness controls
+    // See https://github.com/Hummer12007/brightnessctl.
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "+10%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "10%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,

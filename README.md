@@ -23,7 +23,7 @@ This will allow you to choose what type of session you want to log into via GDM 
 Then, allow the GDM to use Wayland.
 
 ```sh
-sudo vi /etc/gdm3/custom.conf
+sudo vim /etc/gdm3/custom.conf
 ```
 
 ```sh
