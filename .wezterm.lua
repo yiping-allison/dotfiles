@@ -5,6 +5,8 @@ local config = wezterm.config_builder()
 
 config.color_scheme = 'catppuccin-macchiato'
 config.window_background_opacity = 0.9
+-- Comment out the line below if not on niri
+config.window_decorations = "NONE"
 
 config.enable_tab_bar = false
 
