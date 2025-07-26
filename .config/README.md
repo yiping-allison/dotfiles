@@ -4,6 +4,10 @@ User configs under `$HOME/.configs`.
 
 ## Notes
 
+### Niri
+
+On first setup, you will need to configure your display outputs.
+
 ### Waybar
 
 Waybar uses PostCSS. You might want to install a PostCSS linting tool in your code editor.
