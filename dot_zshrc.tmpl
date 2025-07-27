@@ -83,7 +83,7 @@ export NVM_DIR="$HOME/.nvm"
 # nvm end
 
 # pnpm
-export PNPM_HOME="/home/allison/.local/share/pnpm"
+export PNPM_HOME="{{- .chezmoi.homeDir }}/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
