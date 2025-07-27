@@ -13,6 +13,11 @@ Now using [Chezmoi](https://www.chezmoi.io/) to manage dotfiles!
 Some helpful commands:
 
 ```sh
+# Initialize dotfiles on a new machine.
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+```
+
+```sh
 # Add a file or file in directory as a template. This lets us have custom values or configurations per machine.
 chezmoi add --template {{FILE | DIRECTORY}}
 ```
@@ -23,7 +28,7 @@ chezmoi diff
 ```
 
 ```sh
-# Apply your working changes to dotfiles directory
+# Apply your working changes to dotfiles directory (i.e. Chezmoi source vs ~/.config)
 chezmoi apply
 ```
 
@@ -36,6 +41,9 @@ chezmoi cd
 > The code that you push to remote should be the changes in `chezmoi cd`.
 
 See [documentation](https://www.chezmoi.io/user-guide/daily-operations/) for further details.
+
+> [!NOTE]
+> `chezmoi` only manages dotfiles for you. You still need to manually move and setup binaries for `niri` if you want to use it.
 
 ---
 
