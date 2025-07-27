@@ -29,7 +29,7 @@
     "format": "{:%B %d, %OI:%OM %p}",
     "locale": "en_US.UTF-8", // locale for date formatting
     "timezone": "America/Los_Angeles",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<tt><span size='large'>{calendar}</span></tt>",
     "calendar": {
       "mode": "month",
       "mode-mon-col": 1,
@@ -40,7 +40,7 @@
   // right
   /// `pactl info`
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}   {volume}%",
     "format-muted": "",
     "format-icons": {
       "default": ["", "", ""]
@@ -53,15 +53,16 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}",
+    "format": "{icon}   {capacity}%",
     "format-charging": "",
     "format-icons": ["", "", "", "", ""],
     "max-length": 25
   },
   "backlight": {
-    "device": "intel_backlight", // specify the backlight device
-    "format": "{icon} {percentage}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+    "device": "intel_backlight",
+    "format": "{icon}   {percent}%",
+    "format-icons": ["󱓤", "", "󰖨"],
+    "tooltip": false
   },
   "privacy": {
     "icon-spacing": 10,

@@ -1,5 +1,7 @@
 /*
-* Modified version from https://github.com/rubyowo/dotfiles/blob/f925cf8e3461420a21b6dc8b8ad1190107b0cc56/config/waybar/config
+* Modified version from:
+*  - https://github.com/rubyowo/dotfiles/blob/f925cf8e3461420a21b6dc8b8ad1190107b0cc56/config/waybar/config
+*  - https://github.com/nkoehring/configs/blob/main/dot.config/waybar/style.css
 * Icons from: https://www.nerdfonts.com/cheat-sheet 
 */
 @import "mocha.css";
@@ -17,11 +19,18 @@
   margin: 5px 5px;
 }
 
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 1rem;
+}
+
+.modules-right > widget:last-child > #custom-power {
+  margin-right: 1rem;
+}
+
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
   background-color: @surface0;
-  margin-left: 1rem;
 }
 
 #workspaces button {
@@ -46,8 +55,8 @@
 #battery,
 #pulseaudio,
 #privacy,
-#custom-lock,
-#custom-power {
+#custom-power,
+#custom-lock {
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
@@ -94,5 +103,5 @@
 #custom-power {
   border-radius: 1rem;
   color: @red;
-  margin-right: 1rem;
+  padding: 0.5rem 1rem 0.5rem 0.8rem;
 }
