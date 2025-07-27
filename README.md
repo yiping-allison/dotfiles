@@ -8,6 +8,35 @@ A repository to store dotfiles.
 
 _Wikipedia_
 
+Now using [Chezmoi](https://www.chezmoi.io/) to manage dotfiles!
+
+Some helpful commands:
+
+```sh
+# Add a file or file in directory as a template. This lets us have custom values or configurations per machine.
+chezmoi add --template {{FILE | DIRECTORY}}
+```
+
+```sh
+# Diff your working changes with existing
+chezmoi diff
+```
+
+```sh
+# Apply your working changes to dotfiles directory
+chezmoi apply
+```
+
+```sh
+# Teleport to Chezmoi main directory
+chezmoi cd
+```
+
+> [!IMPORTANT]
+> The code that you push to remote should be the changes in `chezmoi cd`.
+
+See [documentation](https://www.chezmoi.io/user-guide/daily-operations/) for further details.
+
 ---
 
 ## Niri
