@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.hostname "birch" -}}
+{{- include "dot_config/waybar/config.jsonc_birch" -}}
+{{- else if eq .chezmoi.hostname "fir" -}}
+{{- include "dot_config/waybar/config.jsonc_fir" -}}
+{{- end }}

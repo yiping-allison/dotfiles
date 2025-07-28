@@ -8,8 +8,6 @@
   // ! This is so we can style the rounded bar corners consistently.
   "modules-right": [
     "pulseaudio",
-    "battery",
-    "backlight",
     "privacy",
     "custom/lock",
     "tray",
@@ -29,40 +27,34 @@
     "format": "{:%B %d, %OI:%OM %p}",
     "locale": "en_US.UTF-8", // locale for date formatting
     "timezone": "America/Los_Angeles",
-    "tooltip-format": "<tt><span size='large'>{calendar}</span></tt>",
+    "tooltip-format": "<tt><span size='medium'>{calendar}</span></tt>",
     "calendar": {
-      "mode": "month",
-      "mode-mon-col": 1,
-      "on-scroll": 1
+      "mode": "year",
+      "mode-mon-col": 4,
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-scroll-up": "shift_down",
+      "on-scroll-down": "shift_up"
     }
   },
 
   // right
   /// `pactl info`
   "pulseaudio": {
-    "format": "{icon}   {volume}%",
+    "format": "{icon} {volume}%",
     "format-muted": "",
     "format-icons": {
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
-  },
-  "battery": {
-    "interval": 60,
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon}   {capacity}%",
-    "format-charging": "",
-    "format-icons": ["", "", "", "", ""],
-    "max-length": 25
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon}   {percent}%",
-    "format-icons": ["󱓤", "", "󰖨"],
-    "tooltip": false
   },
   "privacy": {
     "icon-spacing": 10,
