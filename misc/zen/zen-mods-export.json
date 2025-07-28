@@ -28,5 +28,52 @@
     "createdAt": "2024-10-12",
     "updatedAt": "2025-01-26",
     "enabled": true
+  },
+  "72f8f48d-86b9-4487-acea-eb4977b18f21": {
+    "id": "72f8f48d-86b9-4487-acea-eb4977b18f21",
+    "name": "Better CtrlTab Panel",
+    "description": "Re-style and add customization options for the CtrlTab panel.",
+    "homepage": "https://github.com/psu/zen-mods",
+    "style": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/72f8f48d-86b9-4487-acea-eb4977b18f21/chrome.css",
+    "readme": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/72f8f48d-86b9-4487-acea-eb4977b18f21/readme.md",
+    "image": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/72f8f48d-86b9-4487-acea-eb4977b18f21/image.png",
+    "author": "psu",
+    "version": "1.0.1",
+    "tags": [],
+    "createdAt": "2025-03-28",
+    "updatedAt": "2025-05-22",
+    "preferences": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/72f8f48d-86b9-4487-acea-eb4977b18f21/preferences.json",
+    "enabled": true
+  },
+  "7190e4e9-bead-4b40-8f57-95d852ddc941": {
+    "id": "7190e4e9-bead-4b40-8f57-95d852ddc941",
+    "name": "Tab title fixes",
+    "description": "Increase size of tab titles and add make pending tabs standing out more.",
+    "homepage": "https://github.com/psu/zen-mods",
+    "style": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/7190e4e9-bead-4b40-8f57-95d852ddc941/chrome.css",
+    "readme": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/7190e4e9-bead-4b40-8f57-95d852ddc941/readme.md",
+    "image": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/7190e4e9-bead-4b40-8f57-95d852ddc941/image.png",
+    "author": "psu",
+    "version": "1.0.0",
+    "tags": [],
+    "createdAt": "2025-03-28",
+    "updatedAt": "2025-03-31",
+    "preferences": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/7190e4e9-bead-4b40-8f57-95d852ddc941/preferences.json",
+    "enabled": true
+  },
+  "9bbaab67-a2c8-4d79-837f-90cd72a8932a": {
+    "id": "9bbaab67-a2c8-4d79-837f-90cd72a8932a",
+    "name": "Big Essentials",
+    "description": "Make the Essential tab icons big enough (32px w/ 16px padding) to be recognisable without their names.",
+    "homepage": "https://github.com/leaferiksen/zen-browser-big-essentials",
+    "style": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/9bbaab67-a2c8-4d79-837f-90cd72a8932a/chrome.css",
+    "readme": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/9bbaab67-a2c8-4d79-837f-90cd72a8932a/readme.md",
+    "image": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/9bbaab67-a2c8-4d79-837f-90cd72a8932a/image.png",
+    "author": "leaferiksen",
+    "version": "1.0.2",
+    "tags": [],
+    "createdAt": "2025-03-11",
+    "updatedAt": "2025-06-06",
+    "enabled": true
   }
 }
