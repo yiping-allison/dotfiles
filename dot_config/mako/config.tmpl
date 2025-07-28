@@ -1,0 +1,7 @@
+{{ $module := "mako" }}
+
+{{- if eq .chezmoi.hostname "birch" -}}
+{{- include (print "dot_config/" $module "/config_birch") -}}
+{{- else if eq .chezmoi.hostname "fir" -}}
+{{- include (print "dot_config/" $module "/config_fir") -}}
+{{- end }}
