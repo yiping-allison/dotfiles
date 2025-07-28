@@ -44,7 +44,8 @@ chezmoi cd
 
 See [documentation](https://www.chezmoi.io/user-guide/daily-operations/) for further details.
 
-> [!NOTE] > `chezmoi` only manages dotfiles for you. You still need to manually move and setup binaries for `niri` if you want to use it.
+> [!NOTE]
+> `chezmoi` only manages dotfiles for you. You still need to manually move and setup binaries for `niri` if you want to use it.
 
 ---
 
