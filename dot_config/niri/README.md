@@ -41,3 +41,9 @@ sudo make install
 # Refresh rules
 sudo udevadm control --reload
 ```
+
+## Cursor
+
+```sh
+sudo apt install breeze-cursor-theme
+```
