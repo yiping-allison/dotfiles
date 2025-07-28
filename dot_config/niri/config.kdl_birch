@@ -89,6 +89,8 @@ environment {
     // This is to enable X11 apps to work; this port may not be correct depending on where xwayland-satellite is launched.
     // You can check by `systemctl --user status xwayland-satellite`.
     DISPLAY ":0"
+
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 // You can configure outputs by their name, which you can find

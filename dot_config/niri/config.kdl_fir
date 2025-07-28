@@ -90,6 +90,7 @@ environment {
     // You can check by `systemctl --user status xwayland-satellite`.
     DISPLAY ":1"
 
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
     XDG_CURRENT_DESKTOP "Unity"
 }
 
