@@ -71,12 +71,6 @@ environment {
     XDG_CURRENT_DESKTOP "Unity"
 }
 
-// Limit to 4 workspaces
-workspace "1"
-workspace "2"
-workspace "3"
-workspace "4"
-
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
@@ -617,4 +611,3 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
-
