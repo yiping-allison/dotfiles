@@ -371,10 +371,11 @@ window-rule {
     // block-out-from "screencast"
 }
 
-// Block out password manager from screen capture
+// Block out password manager and private chats from screen capture
 // NOTE: You can use `niri msg windows` to find running applications
 window-rule {
     match app-id="1Password"
+    match app-id="Signal"
 
     block-out-from "screen-capture"
 }
@@ -402,7 +403,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: wezterm" { spawn "flatpak" "run" "org.wezfurlong.wezterm"; }
+    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
