@@ -361,9 +361,10 @@ window-rule {
     // block-out-from "screencast"
 }
 
-// Block out password manager from screen capture
+// Block out password manager and private chats from screen capture
 window-rule {
     match app-id="1Password"
+    match app-id="Signal"
 
     block-out-from "screen-capture"
 }

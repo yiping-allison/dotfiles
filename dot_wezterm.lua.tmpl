@@ -9,6 +9,12 @@ config.window_decorations = "NONE"
 
 config.enable_tab_bar = false
 
+-- Use x11 due to NVIDIA issues with wayland.
+-- https://github.com/wezterm/wezterm/issues/3214
+{{ if eq .chezmoi.hostname "fir" -}}
+config.enable_wayland = false
+{{- end }}
+
 config.inactive_pane_hsb = {
     hue = 0.9,
     saturation = 0.7,
