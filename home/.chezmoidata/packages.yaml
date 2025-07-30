@@ -1,0 +1,10 @@
+# https://www.chezmoi.io/user-guide/advanced/install-packages-declaratively/
+packages:
+  ubuntu:
+    # misc
+    - brightnessctl
+    - breeze-cursor-theme
+    - neofetch
+
+    # wayland utils
+    - waybar
