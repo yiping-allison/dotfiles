@@ -16,7 +16,9 @@ Some helpful commands:
 
 ```sh
 # Initialize dotfiles on a new machine.
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME --ssh
+
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yiping-allison --ssh
 ```
 
 ```sh
