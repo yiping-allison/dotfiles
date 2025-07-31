@@ -1,4 +1,22 @@
+##############
+# oh-my-zsh
+##############
 [".oh-my-zsh"]
 type = 'git-repo'
 url = "https://github.com/ohmyzsh/ohmyzsh.git"
 refreshPeriod = '168h'                         # in hours (1 week)
+
+##############
+# fonts
+##############
+[".local/share/fonts/FiraCode.tar.xz"]
+type = 'file'
+url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.tar.xz"
+
+[".local/share/fonts/FiraCodeMono.tar.xz"]
+type = 'file'
+url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.tar.xz"
+
+[".local/share/fonts/Meslo.tar.xz"]
+type = 'file'
+url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
