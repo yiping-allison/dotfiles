@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -ex pipefail
+
+{{ $home := .chezmoi.homeDir }}
+
+{{- range $font := list "FiraCode.tar.xz" "FiraCodeMono.tar.xz" "Meslo.tar.xz" -}}
+
+{{ $file := joinPath $home ".local/share/fonts" $font }}
+# Hash: {{ include $file | sha256sum }}
+tar xf {{ $file | quote }} --one-top-level
+
+{{- end }}
+
+fc-cache -f
