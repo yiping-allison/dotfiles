@@ -1,6 +1,6 @@
 # Dotfiles
 
-![os](https://img.shields.io/badge/os-Pop!_OS%2022.04-blue)
+![os](https://img.shields.io/badge/os-Pop!__OS%2022.04-blue) ![chezmoi](https://img.shields.io/badge/chezmoi-%3E%3D%20v2.63.1-orange)
 
 A repository to store dotfiles.
 
@@ -10,7 +10,7 @@ A repository to store dotfiles.
 
 _Wikipedia_
 
-Now using [Chezmoi](https://www.chezmoi.io/) to manage dotfiles!
+Dotfiles are managed by [Chezmoi](https://www.chezmoi.io/).
 
 Some helpful commands:
 
@@ -22,8 +22,8 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yiping-allison --ssh
 ```
 
 ```sh
-# Add a file or file in directory as a template. This lets us have custom values or configurations per machine.
-chezmoi add --template {{FILE | DIRECTORY}}
+# Add a file as a template. This lets us have custom values per machine.
+chezmoi add --template {{FILE}}
 ```
 
 ```sh
@@ -32,12 +32,12 @@ chezmoi diff
 ```
 
 ```sh
-# Apply your working changes to dotfiles directory (i.e. Chezmoi source vs ~/.config)
+# Apply your working changes to dotfiles directory (i.e. Chezmoi source to ~/.config)
 chezmoi apply
 ```
 
 ```sh
-# Teleport to Chezmoi main directory
+# Teleport to Chezmoi source
 chezmoi cd
 ```
 
