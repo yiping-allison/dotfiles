@@ -34,6 +34,9 @@ chezmoi diff
 ```sh
 # Apply your working changes to dotfiles directory (i.e. Chezmoi source to ~/.config)
 chezmoi apply
+
+# Apply your working changes to dotfiles with refreshed externals
+chezmoi apply -R
 ```
 
 ```sh
