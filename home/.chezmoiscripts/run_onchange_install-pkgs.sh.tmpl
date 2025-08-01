@@ -3,8 +3,14 @@
 
 set -euo pipefail
 
+sudo apt update
+
 {{ range .packages.ubuntu }}
 sudo apt install -y {{ . }}
+{{- end }}
+
+{{ range .packages.brew }}
+brew install {{ . }}
 {{- end }}
 
 {{- end }}

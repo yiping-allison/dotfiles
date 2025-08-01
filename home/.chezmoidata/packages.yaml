@@ -1,10 +1,23 @@
 # https://www.chezmoi.io/user-guide/advanced/install-packages-declaratively/
 packages:
   ubuntu:
-    # misc
+    # sys utils
     - brightnessctl
-    - breeze-cursor-theme
     - neofetch
 
     # wayland utils
     - waybar
+
+    # misc
+    - breeze-cursor-theme
+
+  brew:
+    # sys utils
+    - htop
+    - zoxide
+
+    # theme-ing
+    - jandedobbeleer/oh-my-posh/oh-my-posh
+
+    # dev tools
+    - just
