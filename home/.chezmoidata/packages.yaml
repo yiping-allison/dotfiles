@@ -17,6 +17,7 @@ packages:
     - zoxide
     - fzf
     - ripgrep
+    - eza
 
     # theme-ing
     - jandedobbeleer/oh-my-posh/oh-my-posh
