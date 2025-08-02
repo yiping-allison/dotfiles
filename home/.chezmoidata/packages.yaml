@@ -4,20 +4,55 @@ packages:
     # https://eza.rocks/
     eza:
       source: http://deb.gierens.de
+      list: gierens.list
+      distribution: stable
+      component: main
       key: gierens.gpg
       keyfile_url: https://raw.githubusercontent.com/eza-community/eza/main/deb.asc
-      list: gierens.list
+
+    # https://launchpad.net/~git-core/+archive/ubuntu/ppa
+    git-core:
+      source: https://ppa.launchpadcontent.net/git-core/ppa/ubuntu
+      list: git-core-ubuntu-ppa-jammy.list
+      distribution: jammy
+      component: main
+      key: git-core-ubuntu-ppa.gpg
+      keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xf911ab184317630c59970973e363c90f8f1b6217
+
+    # https://launchpad.net/~neovim-ppa/+archive/ubuntu/stable
+    neovim:
+      source: https://ppa.launchpadcontent.net/neovim-ppa/stable/ubuntu
+      list: neovim-ubuntu-ppa-jammy.list
+      distribution: jammy
+      component: main
+      key: neovim-ubuntu-ppa.gpg
+      keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9dbb0be9366964f134855e2255f96fcf8231b6dd
+
+    # https://launchpad.net/~papirus/+archive/ubuntu/papirus
+    papirus:
+      source: https://ppa.launchpadcontent.net/papirus/papirus/ubuntu
+      list: papirus-ubuntu-ppa-jammy.list
+      distribution: jammy
+      component: main
+      key: papirus-ubuntu-ppa.gpg
+      keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446faf0df770bfc9ae58a9d36647cae7f
+
   ubuntu:
     # sys utils
     - brightnessctl
     - neofetch
     - eza
 
+    # dev tools
+    - git
+    - neovim
+
     # wayland utils
     - waybar
 
     # misc
     - breeze-cursor-theme
+    - papirus-icon-theme
 
   brew:
     # sys utils

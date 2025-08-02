@@ -16,26 +16,36 @@ sudo mkdir -p /etc/apt/keyrings
 
 {{ range .packages.ppa -}}
 
-{{ $keyring_path := joinPath "/etc" "apt" "keyrings" .key }}
+{{ $keyring_path := "" }}
+{{ if and .key .keyfile_url }}
+{{ $keyring_path = joinPath "/etc" "apt" "keyrings" .key }}
 KEYRING={{ $keyring_path | quote }}
 if [ ! -f "$KEYRING" ]; then
     info "Adding PPA key for {{ .source }}..."
-    wget -qO- {{ .keyfile_url }} | sudo gpg --dearmor -o "$KEYRING"
+    wget -qO- {{ .keyfile_url | quote }} | sudo gpg --dearmor -o "$KEYRING"
+    sudo chmod 644 "$KEYRING"
 else
     warn "PPA key for {{ .source }} already exists."
 fi
+{{ end }}
 
 {{ $source_list := joinPath "/etc" "apt" "sources.list.d" .list }}
 SOURCE={{ $source_list | quote }}
 if [ ! -f "$SOURCE" ]; then
     info "Adding PPA source for {{ .source }}..."
-    echo "deb [signed-by=$KEYRING] {{ .source }} stable main" | sudo tee "$SOURCE"
+    {{ $source_parts := list "deb" }}
+    {{ if $keyring_path }}
+        {{ $source_parts = append $source_parts (printf "[signed-by=%s]" $keyring_path) }}
+    {{ end }}
+    {{ $source_parts = append $source_parts .source }}
+    {{ $source_parts = append $source_parts .distribution }}
+    {{ $source_parts = append $source_parts .component }}
+    {{ $source := $source_parts | join " " }}
+    echo {{ $source | quote }} | sudo tee "$SOURCE"
+    sudo chmod 644 "$SOURCE"
 else
     warn "PPA source for {{ .source }} already exists."
 fi
-
-# Ensure the keyring and source file have the correct permissions
-sudo chmod 644 "$KEYRING" "$SOURCE"
 
 success "PPA {{ .source }} added successfully."
 {{- end }}
