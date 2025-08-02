@@ -1,9 +1,17 @@
 # https://www.chezmoi.io/user-guide/advanced/install-packages-declaratively/
 packages:
+  ppa:
+    # https://eza.rocks/
+    eza:
+      source: http://deb.gierens.de
+      key: gierens.gpg
+      keyfile_url: https://raw.githubusercontent.com/eza-community/eza/main/deb.asc
+      list: gierens.list
   ubuntu:
     # sys utils
     - brightnessctl
     - neofetch
+    - eza
 
     # wayland utils
     - waybar
@@ -17,7 +25,6 @@ packages:
     - zoxide
     - fzf
     - ripgrep
-    - eza
 
     # theme-ing
     - jandedobbeleer/oh-my-posh/oh-my-posh

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# Pretty print functions
+info()    { echo -e "\033[1;34m[INFO]\033[0m $*"; }
+warn()    { echo -e "\033[1;33m[WARN]\033[0m $*"; }
+error()   { echo -e "\033[1;31m[ERROR]\033[0m $*"; }
+success() { echo -e "\033[1;32m✅ $*\033[0m"; }
+
+{{ if eq .chezmoi.osRelease.id "pop" }}
+# Preparation for PPAs
+sudo apt update
+sudo apt install -y gpg
+sudo mkdir -p /etc/apt/keyrings
+
+{{ range .packages.ppa -}}
+
+{{ $keyring_path := joinPath "/etc" "apt" "keyrings" .key }}
+KEYRING={{ $keyring_path | quote }}
+if [ ! -f "$KEYRING" ]; then
+    info "Adding PPA key for {{ .source }}..."
+    wget -qO- {{ .keyfile_url }} | sudo gpg --dearmor -o "$KEYRING"
+else
+    warn "PPA key for {{ .source }} already exists."
+fi
+
+{{ $source_list := joinPath "/etc" "apt" "sources.list.d" .list }}
+SOURCE={{ $source_list | quote }}
+if [ ! -f "$SOURCE" ]; then
+    info "Adding PPA source for {{ .source }}..."
+    echo "deb [signed-by=$KEYRING] {{ .source }} stable main" | sudo tee "$SOURCE"
+else
+    warn "PPA source for {{ .source }} already exists."
+fi
+
+# Ensure the keyring and source file have the correct permissions
+sudo chmod 644 "$KEYRING" "$SOURCE"
+
+success "PPA {{ .source }} added successfully."
+{{- end }}
+
+{{ end }}
