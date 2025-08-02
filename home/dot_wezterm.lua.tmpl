@@ -3,15 +3,20 @@ local wezterm = require 'wezterm'
 local mux = wezterm.mux
 local config = wezterm.config_builder()
 
+config.enable_tab_bar = false
 config.color_scheme = 'catppuccin-macchiato'
 config.window_background_opacity = 0.9
+config.inactive_pane_hsb = {
+    hue = 0.9,
+    saturation = 0.7,
+    brightness = 0.8,
+}
+config.font_size = 10.0
 
 {{ if eq .chezmoi.os "linux" -}}
 -- Disable window decorations on linux since we use `niri`.
 config.window_decorations = "NONE"
 {{- end }}
-
-config.enable_tab_bar = false
 
 {{ if eq .chezmoi.hostname "fir" -}}
 -- Use x11 due to NVIDIA issues with wayland.
@@ -19,12 +24,9 @@ config.enable_tab_bar = false
 config.enable_wayland = false
 {{- end }}
 
-config.inactive_pane_hsb = {
-    hue = 0.9,
-    saturation = 0.7,
-    brightness = 0.8,
-}
-config.font_size = 10.0
+-- Plugins
+local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
+workspace_switcher.zoxide_path = {{ joinPath (includeTemplate "homebrew" (dict "os" .chezmoi.os "arch" .chezmoi.arch)) "bin" "zoxide" | quote }}
 
 -- Set main keybinding key to "CTRL + p"
 config.leader = { key='p', mods='CTRL', timeout_milliseconds=1000 }
@@ -84,6 +86,10 @@ config.keys = {
     { key = 'n', mods = 'CTRL', action = wezterm.action.SwitchWorkspaceRelative(1) },
     { key = 'b', mods = 'CTRL', action = wezterm.action.SwitchWorkspaceRelative(-1) },
 
+    -- Smart workspace switcher plugin
+    -- https://github.com/MLFlexer/smart_workspace_switcher.wezterm?tab=readme-ov-file#Keybinding
+    { key = 's', mods = "LEADER", action = workspace_switcher.switch_workspace() },
+    { key = 'S', mods = "LEADER|SHIFT", action = workspace_switcher.switch_to_prev_workspace() },
 
     -- Copy and paste from clipboard
     { key ='p',  mods='LEADER', action=wezterm.action.PasteFrom 'Clipboard' },

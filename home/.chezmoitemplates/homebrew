@@ -1,0 +1,9 @@
+{{- if eq .os "linux" -}}
+/home/linuxbrew/.linuxbrew
+{{- else if eq .os "darwin" -}}
+{{- if eq .arch "arm64" -}}
+/opt/homebrew
+{{- else if eq .arch "amd64" -}}
+/usr/local
+{{- end -}}
+{{- end -}}
