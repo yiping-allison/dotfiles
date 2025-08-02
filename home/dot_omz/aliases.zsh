@@ -12,3 +12,7 @@ alias gb='git branch'
 # pnpm
 alias pn=pnpm
 # pnpm end
+
+# misc
+alias ls="eza"
+# misc end
