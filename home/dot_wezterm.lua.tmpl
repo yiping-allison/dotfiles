@@ -5,7 +5,11 @@ local config = wezterm.config_builder()
 
 config.color_scheme = 'catppuccin-macchiato'
 config.window_background_opacity = 0.9
+
+{{ if eq .chezmoi.os "linux" -}}
+-- Disable window decorations on linux since we use `niri`.
 config.window_decorations = "NONE"
+{{- end }}
 
 config.enable_tab_bar = false
 

@@ -16,7 +16,7 @@ export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar";
 export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew";
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin${PATH+:$PATH}";
 export INFOPATH="$HOMEBREW_PREFIX/share/info:${INFOPATH:-}";
-fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
 # homebrew end
 
