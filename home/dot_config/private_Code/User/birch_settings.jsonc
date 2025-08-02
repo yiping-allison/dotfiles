@@ -73,5 +73,8 @@
   "[postcss]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "bodil.prettier-toml"
   }
 }
