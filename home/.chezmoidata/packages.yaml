@@ -46,6 +46,7 @@ packages:
     # dev tools
     - git
     - neovim
+    - thefuck
 
     # wayland utils
     - waybar
@@ -60,6 +61,7 @@ packages:
     - zoxide
     - fzf
     - ripgrep
+    - tlrc
 
     # theme-ing
     - jandedobbeleer/oh-my-posh/oh-my-posh

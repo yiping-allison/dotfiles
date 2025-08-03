@@ -81,12 +81,12 @@ file_type:
   video: { foreground: "#F38BA8" }
   music: { foreground: "#A6E3A1" }
   lossless: { foreground: "#94E2D5" }
-  crypto: { foreground: "#585B70" }
+  crypto: { foreground: "#8087A2" }
   document: { foreground: "#CDD6F4" }
   compressed: { foreground: "#F5C2E7" }
   temp: { foreground: "#EBA0AC" }
   compiled: { foreground: "#74C7EC" }
-  build: { foreground: "#585B70" }
+  build: { foreground: "#8087A2" }
   source: { foreground: "#89B4FA" }
 
 punctuation: { foreground: "#7F849C" }

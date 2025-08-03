@@ -1,0 +1,8 @@
+--hidden
+--glob !.git/
+--smart-case
+--follow
+--color=auto
+--heading
+--line-number
+--column
