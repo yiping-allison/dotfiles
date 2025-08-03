@@ -10,6 +10,10 @@ sudo apt update
 sudo apt install -y {{ . }}
 {{- end }}
 
+{{ range .packages.dpkg }}
+wget -qO- {{ . | quote }} > /tmp/pkg.deb && sudo dpkg -i /tmp/pkg.deb && rm -rf /tmp/pkg.deb
+{{- end }}
+
 {{ range .packages.brew }}
 brew install {{ . }}
 {{- end }}

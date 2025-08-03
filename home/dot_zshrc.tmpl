@@ -123,7 +123,13 @@ ZSH_CUSTOM="$HOME/.omz"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew zoxide eza thefuck fzf fzf-tab)
+plugins=(git zoxide eza thefuck fzf fzf-tab)
+
+# Additional completions.
+# ! NOTE: If you add a new completion, you may need to refresh `.zcompdump` to make it available.
+# You can find the file using `echo $ZSH_COMPDUMP`.
+# Remove the file and reload: `omz reload`.
+fpath=($HOME/.zsh/completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
