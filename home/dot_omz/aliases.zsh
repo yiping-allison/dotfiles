@@ -12,3 +12,7 @@ alias gb='git branch'
 # pnpm
 alias pn=pnpm
 # pnpm end
+
+# misc
+alias cat='bat'
+# misc end

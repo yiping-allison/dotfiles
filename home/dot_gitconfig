@@ -1,13 +1,32 @@
 [user]
 	email = 32723567+yiping-allison@users.noreply.github.com
 	name = Yiping (Allison)
+
 [core]
 	editor = nvim
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
 [push]
 	autoSetupRemote = true
+
 [fetch]
 	prune = true
+
 [branch]
 	sort = -committerdate
+
 [alias]
 	sync = !git switch main && git pull --prune && git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
+
+[delta]
+	navigate = true
+	dark = true
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = zenburn
+
+[merge]
+	conflictStyle = zdiff3
