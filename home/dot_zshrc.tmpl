@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ! so we can use dependencies like `oh-my-posh`.
 # homebrew
 {{ $brew_prefix := includeTemplate "homebrew" (dict "os" .chezmoi.os "arch" .chezmoi.arch) }}
-HOMEBREW_PREFIX={{- $brew_prefix | quote }}
+export HOMEBREW_PREFIX={{- $brew_prefix | quote }}
 export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar";
 export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew";
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin${PATH+:$PATH}";
@@ -48,7 +48,22 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
 
-# `fzf` styling
+##########################
+# `fzf`
+########################## 
+export FZF_BASE="$HOMEBREW_PREFIX/bin/fzf"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+# https://github.com/catppuccin/fzf
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
+--color=fg:#CAD3F5,header:#ED8796,info:#C6A0F6,pointer:#F4DBD6 \
+--color=marker:#B7BDF8,fg+:#CAD3F5,prompt:#C6A0F6,hl+:#ED8796 \
+--color=selected-bg:#494D64 \
+--color=border:#6E738D,label:#CAD3F5"
+
+##########################
+# `fzf-tab`
+########################## 
 # Disable sort when completing `git checkout`
 zstyle ':completion:*:*:git-checkout:*' sort false
 # Set descriptions format to enable group support
@@ -61,7 +76,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 # custom fzf flags
 # NOTE: fzf-tab does not follow FZF_DEFAULT_OPTS by default
-zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
+zstyle ':fzf-tab:*' fzf-flags --color=fg:#CAD3F5,fg+:#CAD3F5 --bind=tab:accept
 # To make fzf-tab follow FZF_DEFAULT_OPTS.
 # NOTE: This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
@@ -108,7 +123,7 @@ ZSH_CUSTOM="$HOME/.omz"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew zoxide fzf-tab)
+plugins=(git brew zoxide eza thefuck fzf fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 
