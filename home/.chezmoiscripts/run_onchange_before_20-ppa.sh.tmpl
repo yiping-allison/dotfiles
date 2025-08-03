@@ -24,6 +24,7 @@ if [ ! -f "$KEYRING" ]; then
     info "Adding PPA key for {{ .source }}..."
     wget -qO- {{ .keyfile_url | quote }} | sudo gpg --dearmor -o "$KEYRING"
     sudo chmod 644 "$KEYRING"
+    success "PPA key for {{ .source }} added successfully."
 else
     warn "PPA key for {{ .source }} already exists."
 fi
@@ -43,11 +44,12 @@ if [ ! -f "$SOURCE" ]; then
     {{ $source := $source_parts | join " " }}
     echo {{ $source | quote }} | sudo tee "$SOURCE"
     sudo chmod 644 "$SOURCE"
+    success "PPA source for {{ .source }} added successfully."
 else
     warn "PPA source for {{ .source }} already exists."
 fi
 
-success "PPA {{ .source }} added successfully."
+success "PPA {{ .source }} configured successfully."
 {{- end }}
 
 {{ end }}
