@@ -3,3 +3,14 @@ README.md
 {{ if ne .chezmoi.hostname "fir" }}
 .config/steamtinkerlaunch # only allow on `fir`
 {{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.config/fuzzel
+.config/mako
+.config/niri
+.config/swaylock
+.config/systemd
+.config/waybar
+.config/wlogout
+.config/steamtinkerlaunch
+{{ end }}
