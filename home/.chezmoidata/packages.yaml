@@ -23,9 +23,9 @@ packages:
       key: git-core-ubuntu-ppa.gpg
       keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xf911ab184317630c59970973e363c90f8f1b6217
 
-    # https://launchpad.net/~neovim-ppa/+archive/ubuntu/stable
+    # https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable
     neovim:
-      source: https://ppa.launchpadcontent.net/neovim-ppa/stable/ubuntu
+      source: https://ppa.launchpadcontent.net/neovim-ppa/unstable/ubuntu
       list: neovim-ubuntu-ppa-jammy.list
       distribution: jammy
       component: main
@@ -44,6 +44,8 @@ packages:
   ubuntu:
     # sys utils
     - brightnessctl
+    - pavucontrol
+    - xclip
     - neofetch
     - eza
 
@@ -54,6 +56,7 @@ packages:
 
     # wayland utils
     - waybar
+    - wl-clipboard
 
     # misc
     - breeze-cursor-theme
