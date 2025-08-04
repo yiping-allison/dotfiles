@@ -22,12 +22,24 @@ return {{
 }, {
     "neovim/nvim-lspconfig",
     config = function()
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
         local lspconfig = require("lspconfig")
-        lspconfig.lua_ls.setup({})
-        lspconfig.pyright.setup({})
-        lspconfig.gopls.setup({})
-        lspconfig.denols.setup({})
-        lspconfig.marksman.setup({})
+        lspconfig.lua_ls.setup({
+            capabilities = capabilities
+        })
+        lspconfig.pyright.setup({
+            capabilities = capabilities
+        })
+        lspconfig.gopls.setup({
+            capabilities = capabilities
+        })
+        lspconfig.denols.setup({
+            capabilities = capabilities
+        })
+        lspconfig.marksman.setup({
+            capabilities = capabilities
+        })
     end,
     keys = {{
         "K",
@@ -57,13 +69,5 @@ return {{
         "<leader>ca",
         vim.lsp.buf.code_action,
         desc = "Code action"
-    }, {
-        "<leader>f",
-        function()
-            vim.lsp.buf.format({
-                async = true
-            })
-        end,
-        desc = "Format document"
     }}
 }}
