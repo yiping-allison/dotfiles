@@ -1,5 +1,5 @@
 -- https://github.com/nvim-telescope/telescope.nvim
-return {
+return {{
     "nvim-telescope/telescope.nvim",
     tag = '0.1.8',
     dependencies = {'nvim-lua/plenary.nvim'},
@@ -37,5 +37,23 @@ return {
             })
         end,
         desc = "Live grep"
+    }, {
+        "<leader>j",
+        function()
+            return require("telescope.builtin").jumplist()
+        end,
+        desc = "Jump list"
     }}
-}
+}, {
+    "nvim-telescope/telescope-ui-select.nvim",
+    dependencies = {"nvim-telescope/telescope.nvim"},
+    config = function()
+        extensions = {
+            ["ui-select"] = {require("telescope.themes").get_dropdown({
+                winblend = 10,
+                border = true
+            })}
+        }
+        require("telescope").load_extension("ui-select")
+    end
+}}

@@ -1,3 +1,4 @@
+-- theme-ing
 return {
     "catppuccin/nvim",
     name = "catppuccin",
