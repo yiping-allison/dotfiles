@@ -31,7 +31,6 @@ vim.opt.pumblend = 10
 vim.opt.winblend = 0
 
 -- behavior
-vim.opt.clipboard:append("unnamedplus") -- use system clipboard
 vim.opt.modifiable = true -- allow modification of buffers
 vim.opt.encoding = "UTF-8" -- set encoding to utf-8
 
