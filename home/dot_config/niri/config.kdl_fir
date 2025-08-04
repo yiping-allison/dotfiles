@@ -25,6 +25,11 @@ cursor {
     hide-when-typing
 }
 
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
@@ -155,6 +160,8 @@ output "HDMI-A-1" {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
+    background-color "transparent"
+
     // Set gaps around windows in logical pixels.
     gaps 16
 
