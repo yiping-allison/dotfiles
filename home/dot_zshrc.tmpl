@@ -52,7 +52,7 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # `fzf`
 ########################## 
 export FZF_BASE="$HOMEBREW_PREFIX/bin/fzf"
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --color=always'
 # https://github.com/catppuccin/fzf
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
