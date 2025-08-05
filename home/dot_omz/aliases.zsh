@@ -15,4 +15,5 @@ alias pn=pnpm
 
 # misc
 alias cat='bat'
+alias fd='fdfind'
 # misc end
