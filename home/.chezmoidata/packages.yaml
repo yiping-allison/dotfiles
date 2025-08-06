@@ -1,10 +1,7 @@
 # https://www.chezmoi.io/user-guide/advanced/install-packages-declaratively/
 packages:
   dpkg:
-    - https://github.com/sharkdp/bat/releases/download/v0.25.0/bat_0.25.0_amd64.deb
-    - https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_amd64.deb
-    # ! NOTE: `pop-os` ships with `fd` v8.3.1; will hit dependency conflicts if installed with `dpkg`
-    # - https://github.com/sharkdp/fd/releases/download/v10.2.0/fd_10.2.0_amd64.deb
+    - https://github.com/akdor1154/gamescope-pkg/releases/download/v3.12.5-2/gamescope_3.12.5-2_amd64.deb
 
   ppa:
     # https://eza.rocks/
@@ -43,6 +40,15 @@ packages:
       key: papirus-ubuntu-ppa.gpg
       keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446faf0df770bfc9ae58a9d36647cae7f
 
+    # https://apt.cli.rs/
+    rust-tools:
+      source: https://apt.cli.rs
+      list: rust-tools.list
+      distribution: all
+      component: main
+      key: rust-tools.gpg
+      keyfile_url: https://apt.cli.rs/pubkey.asc
+
   ubuntu:
     # sys utils
     - brightnessctl
@@ -50,26 +56,34 @@ packages:
     - xclip
     - neofetch
     - eza
+    - bat
+    - zoxide
+    - ripgrep
 
     # dev tools
     - git
+    - git-delta
     - neovim
     - thefuck
 
     # wayland utils
-    - waybar
     - wl-clipboard
 
     # misc
     - breeze-cursor-theme
     - papirus-icon-theme
 
+    # niri
+    - waybar
+    - swaybg
+    - swayidle
+    - policykit-1-gnome
+    - libnotify-bin # mako dependency
+
   brew:
     # sys utils
     - htop
-    - zoxide
     - fzf
-    - ripgrep
     - tlrc
 
     # theme-ing

@@ -46,7 +46,9 @@ romantomjak.go-template
 rust-lang.rust-analyzer
 streetsidesoftware.code-spell-checker
 t3dotgg.vsc-material-theme-but-i-wont-sue-you
+tamasfe.even-better-toml
 tobiashochguertel.just-formatter
 vscodevim.vim
 wayou.vscode-todo-highlight
+yinfei.luahelper
 zxh404.vscode-proto3

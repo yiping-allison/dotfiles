@@ -5,7 +5,7 @@ A collection of binaries that I have already built (and tested working) on one m
 Adding it to git because I have multiple machines, and I don't want to bother re-building again.
 
 > [!IMPORTANT]
-> Built for PopOS 22.04
+> Built for `Pop!_OS 22.04`.
 
 The binaries are compressed. Use the command below to uncompress them.
 
@@ -38,3 +38,8 @@ tar -xvf {PROGRAM}.tar.xz
 > ```
 >
 > Place this file under `/usr/lib/systemd/user/`.
+
+## Other docs for binaries
+
+- [`niri`](./niri/README.md)
+- [`wlogout`](./wlogout/README.md)

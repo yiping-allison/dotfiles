@@ -1,5 +1,8 @@
 Instructions for manually installing apps (because flatpak versions are breaking).
 
+> [!NOTE]
+> The instructions below are for Zen, but you can apply it to any other application that are manually installed.
+
 ## Zen Browser
 
 > [!TIP]
@@ -25,14 +28,17 @@ Instructions for manually installing apps (because flatpak versions are breaking
 > Use `Icon=zen-browser` if [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) is installed. If you need to verify the icon name, you can view them by traversing the Papirus icon
 > directory.
 >
-> `usr/share/icons/Papirus`
+> `/usr/share/icons/Papirus`
 
 > [!NOTE]
 > `StartupWMClass=zen` is needed in order to resolve the app's instance window with a custom launcher icon.
-> Use `xprop | grep WM_CLASS` (on X11 systems) and click on the Zen browser window to view the name.
+> Use `xprop | grep WM_CLASS` (on X11 systems), and click on the Zen browser window to view the name.
 >
 > ```sh
 > WM_CLASS(STRING) = "zen-browser", "zen"
 > ```
 >
 > You want the second string.
+
+> [!NOTE]
+> You can find the window name in `niri` as well using `niri msg windows` when the Zen browser is open.
