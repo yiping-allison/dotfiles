@@ -36,7 +36,7 @@ config.enable_wayland = false
 
 The block adds a configuration to disable Wayland when the machine's hostname is `fir`.
 
-> [!INFO]
+> [!NOTE]
 > `fir` is one of my personal machines.
 
 There may be dots that are disallowed on certain machines.
