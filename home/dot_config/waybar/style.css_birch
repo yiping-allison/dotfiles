@@ -7,9 +7,9 @@
 @import "mocha.css";
 
 * {
-  font-family: FiraCode Nerd Font Mono;
+  font-family: MesloLGS Nerd Font Mono Regular;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   min-height: 0;
 }
 
