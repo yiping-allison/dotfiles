@@ -45,18 +45,26 @@ chezmoi cd
 ```
 
 > [!IMPORTANT]
-> The code that you push to remote should be the changes in `chezmoi cd`.
+> The code that you push to `git` remote should be the changes in `chezmoi cd`.
 
 See [documentation](https://www.chezmoi.io/user-guide/daily-operations/) for further details.
-
-> [!NOTE]
-> `chezmoi` only manages dotfiles for you. You still need to manually move and setup binaries for `niri` if you want to use it.
 
 ---
 
 ## Niri
 
-[Niri](https://github.com/YaLTeR/niri) is a scrollable Wayland compositor. At minimum (if you want to use it), you need to enable wayland.
+[Niri](https://github.com/YaLTeR/niri) is a scrollable Wayland compositor. If you want to use it, you need to enable [Wayland](https://wayland.freedesktop.org/).
+
+> [!IMPORTANT]
+> You need to install and setup `niri` manually. I have included some pre-packaged binaries, but there
+> are several that you need to build from source.
+>
+> See the following READMEs:
+> - [Binary setup](bin/README.md)
+> - [Dotfile notes](home/README.md#niri)
+> - [Misc setup (optional if you're not on NVIDIA)](opt/README.md)
+
+### Enabling Wayland
 
 ```sh
 sudo apt install gnome-session
@@ -73,18 +81,6 @@ sudo vim /etc/gdm3/custom.conf
 ```sh
 WaylandEnable=true
 ```
-
-## Tmux
-
-### Installing Plugins
-
-Plugins are managed by [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm).
-
-Initialize new plugins by running `prefix + I`.
-
-## Wezterm
-
-[Wezterm](https://wezfurlong.org/wezterm/index.html) is a cross-platform terminal emulator and multiplexer.
 
 ## Man Pages
 

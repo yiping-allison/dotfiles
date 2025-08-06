@@ -26,7 +26,7 @@ config.enable_wayland = false
 
 -- Plugins
 local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
-workspace_switcher.zoxide_path = {{ joinPath (includeTemplate "homebrew" (dict "os" .chezmoi.os "arch" .chezmoi.arch)) "bin" "zoxide" | quote }}
+workspace_switcher.zoxide_path = {{ joinPath "/usr" "bin" "zoxide" | quote }}
 
 -- Set main keybinding key to "CTRL + p"
 config.leader = { key='p', mods='CTRL', timeout_milliseconds=1000 }
