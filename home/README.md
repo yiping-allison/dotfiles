@@ -67,6 +67,14 @@ Some developer tooling are installed via `brew` since they do not have the lates
 
 Configuration can be found in [`packages.yaml`](./.chezmoidata/packages.yaml).
 
+### Wallpaper
+
+Found in [`Pictures/wallpapers`](Pictures/wallpapers/).
+
+- [Louis Coyle](https://louie.co.nz/)
+- [David Becker](https://unsplash.com/@beckerworks)
+- [Catppuccin-Wallpapers](https://github.com/zhichaoh/catppuccin-wallpapers/tree/main)
+
 ## Tools
 
 ### Tmux
