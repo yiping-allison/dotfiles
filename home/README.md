@@ -89,14 +89,20 @@ Add additional firejail profiles in [`dot_config/firejail`](./dot_config/firejai
 Additional documentation can be found [here](https://firejail.wordpress.com/documentation-2/building-custom-profiles/).
 
 > [!TIP]
-> There may be some apps that when closed does not close the associated firejail parent process.
+> There may be some apps that when closed, do not close the associated firejail parent process.
 > You can check currently running processes using:
 >
 > ```sh
 > firejail --list
 > ```
 >
-> Then use `firejail --shutdown={ID}` to stop the sandbox.
+> Then use:
+>
+> ```sh
+> firejail --shutdown={ID}
+> ```
+>
+> to stop the sandbox.
 
 ## Tools
 
