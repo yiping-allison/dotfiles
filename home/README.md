@@ -86,7 +86,10 @@ sudo firecfg
 
 Add additional firejail profiles in [`dot_config/firejail`](./dot_config/firejail/).
 
-Additional documentation can be found [here](https://firejail.wordpress.com/documentation-2/building-custom-profiles/).
+Additional documentation:
+
+- [Creating Profiles](https://github.com/netblue30/firejail/wiki/Creating-Profiles)
+- [Building Custom Profiles](https://firejail.wordpress.com/documentation-2/building-custom-profiles/)
 
 > [!TIP]
 > There may be some apps that when closed, do not close the associated firejail parent process.
@@ -291,7 +294,7 @@ Make sure to add your own file per host and update `*.tmpl`.
 
 #### fuzzel
 
-[`fuzzel`](https://codeberg.org/dnkl/fuzzel) is a app launcher.
+[`fuzzel`](https://codeberg.org/dnkl/fuzzel) is an app launcher.
 
 Configuration can be found in [`dot_config/fuzzel`](./dot_config/fuzzel/).
 
@@ -321,7 +324,7 @@ steamtinkerlaunch compat add
 >
 > Steam Settings > Compatibility > Steam Tinker Launch
 
-Configuration files can be found [here](./dot_config/steamtinkerlaunch/).
+Configuration files can be found in [`dot_config/steamtinkerlaunch`](./dot_config/steamtinkerlaunch/).
 
 > [!TIP]
 > The default config was customized to match my monitor settings. You may need to update these

@@ -42,3 +42,9 @@ Instructions for manually installing apps (because flatpak versions are breaking
 
 > [!NOTE]
 > You can find the window name in `niri` as well using `niri msg windows` when the Zen browser is open.
+
+### Security
+
+Zen will be automatically sandbox-ed with [firejail](https://github.com/netblue30/firejail).
+
+Zen's custom profile can be found in [`dot_config/firejail`](../home/dot_config/firejail/).

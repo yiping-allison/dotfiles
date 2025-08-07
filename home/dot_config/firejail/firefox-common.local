@@ -1,0 +1,7 @@
+# Allow access to common programs/addons/plugins
+include /etc/firejail/firefox-common-addons.profile
+
+# Allow native notifications
+dbus-user.talk org.freedesktop.Notifications
+# Allow screenshare under Wayland
+dbus-user.talk org.freedesktop.portal.Desktop
