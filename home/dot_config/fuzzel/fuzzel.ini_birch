@@ -1,7 +1,13 @@
-font='MesloLGS Nerd Font Mono Regular':size=8
+font='MesloLGS Nerd Font Mono Regular':size=9
 icon-theme=Papirus-Dark
 prompt="> "
-show-actions=yes
+show-actions=no
+match-mode=fzf
+
+lines=14
+width=30
+horizontal-pad=40
+vertical-pad=20
 
 # https://github.com/catppuccin/fuzzel/blob/main/themes/catppuccin-mocha/lavender.ini
 [colors]
@@ -18,4 +24,5 @@ counter=7f849cff
 border=b4befeff
 
 [border]
+width=2
 radius=20
