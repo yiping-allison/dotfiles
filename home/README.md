@@ -75,6 +75,29 @@ Found in [`Pictures/wallpapers`](Pictures/wallpapers/).
 - [David Becker](https://unsplash.com/@beckerworks)
 - [Catppuccin-Wallpapers](https://github.com/zhichaoh/catppuccin-wallpapers/tree/main)
 
+### Security
+
+You can enable [`firejail`](https://github.com/netblue30/firejail/tree/master?tab=readme-ov-file) to sandbox applications that do not normally run in a sandbox environment.
+
+```sh
+# Automatically launch apps in sandbox environments
+sudo firecfg
+```
+
+Add additional firejail profiles in [`dot_config/firejail`](./dot_config/firejail/).
+
+Additional documentation can be found [here](https://firejail.wordpress.com/documentation-2/building-custom-profiles/).
+
+> [!TIP]
+> There may be some apps that when closed does not close the associated firejail parent process.
+> You can check currently running processes using:
+>
+> ```sh
+> firejail --list
+> ```
+>
+> Then use `firejail --shutdown={ID}` to stop the sandbox.
+
 ## Tools
 
 ### Tmux
