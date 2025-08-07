@@ -49,8 +49,19 @@ packages:
       key: rust-tools.gpg
       keyfile_url: https://apt.cli.rs/pubkey.asc
 
+    # https://github.com/netblue30/firejail
+    firejail:
+      source: https://ppa.launchpadcontent.net/deki/firejail/ubuntu
+      list: firejail-ppa-jammy.list
+      distribution: jammy
+      component: main
+      key: firejail-ppa.gpg
+      keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x0b58929c0081a52410e8992260537cdcf684460c
+
   ubuntu:
     # sys utils
+    - firejail
+    - firejail-profiles
     - brightnessctl
     - pavucontrol
     - xclip
