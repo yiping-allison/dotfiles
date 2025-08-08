@@ -5,9 +5,7 @@
   "editor.semanticHighlighting.enabled": true,
   "terminal.integrated.minimumContrastRatio": 1,
   "window.titleBarStyle": "custom",
-  "gopls": {
-    "ui.semanticHighlighting": true
-  },
+  "gopls": {},
   "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
 
   "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
