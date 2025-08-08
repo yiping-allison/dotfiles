@@ -3,10 +3,10 @@
 # Technically this is set in niri config, but I also need to add it here since
 # I launch VSCode from the terminal.
 code () {
-  (firejail --quiet --env=DISPLAY=:1 /usr/bin/code "$@" & disown) > /dev/null 2>&1
+  (firejail --quiet --env=DISPLAY=:1 /usr/bin/codium "$@" & disown) > /dev/null 2>&1
 }
 {{- else }}
 code () {
-  (firejail --quiet /usr/bin/code "$@" & disown) > /dev/null 2>&1
+  (firejail --quiet /usr/bin/codium "$@" & disown) > /dev/null 2>&1
 }
 {{- end }}

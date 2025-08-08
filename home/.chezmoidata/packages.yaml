@@ -58,6 +58,15 @@ packages:
       key: firejail-ppa.gpg
       keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x0b58929c0081a52410e8992260537cdcf684460c
 
+    # https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo
+    vscodium:
+      source: https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs
+      list: vscodium.list
+      distribution: vscodium
+      component: main
+      key: vscodium.gpg
+      keyfile_url: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+
   ubuntu:
     # sys utils
     - firejail
@@ -76,6 +85,7 @@ packages:
     - git-delta
     - neovim
     - thefuck
+    - codium
 
     # wayland utils
     - wl-clipboard
