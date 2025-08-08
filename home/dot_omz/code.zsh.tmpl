@@ -3,6 +3,10 @@
 # Technically this is set in niri config, but I also need to add it here since
 # I launch VSCode from the terminal.
 code () {
-  DISPLAY=:1 /usr/bin/code "$@"
+  DISPLAY=:1 /usr/local/bin/code "$@" > /dev/null 2>&1 & disown
+}
+{{- else }}
+code () {
+  /usr/local/bin/code "$@" > /dev/null 2>&1 & disown
 }
 {{- end }}
