@@ -1,0 +1,2 @@
+# Allow access to host network
+net host
