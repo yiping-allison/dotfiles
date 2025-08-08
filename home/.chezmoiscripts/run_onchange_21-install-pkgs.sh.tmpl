@@ -18,4 +18,7 @@ wget -qO- {{ . | quote }} > /tmp/pkg.deb && sudo dpkg -i /tmp/pkg.deb && rm -rf 
 brew install {{ . }}
 {{- end }}
 
+# Enable firejail
+sudo firecfg
+
 {{- end }}
