@@ -21,9 +21,14 @@ eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ! NOTE: We are using oh-my-posh as our theme manager.
-eval "$(oh-my-posh init --config $HOME/.config/oh-my-posh/catppuccin.omp.json zsh)"
+# ! NOTE: We are using oh-my-posh as our theme manager. But if we don't find it, fallback to omz theme.
 ZSH_THEME=""
+if command -v oh-my-posh >/dev/null 2>&1; then
+  eval "$(oh-my-posh init --config $HOME/.config/oh-my-posh/catppuccin.omp.json zsh)"
+else
+  # Fallback to a default Oh My Zsh theme
+  ZSH_THEME="agnoster"  # or any other theme
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
