@@ -8,8 +8,8 @@
   "gopls": {},
   "workbench.productIconTheme": "Tabler",
 
-  "terminal.integrated.fontFamily": "'FiraCode Nerd Font'",
-  "editor.fontFamily": "'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono',monospace",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.guides.bracketPairs": true,
   "go.toolsManagement.autoUpdate": true,
