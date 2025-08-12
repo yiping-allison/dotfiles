@@ -7,9 +7,9 @@
 @import "mocha.css";
 
 * {
-  font-family: MesloLGS Nerd Font Mono Regular;
+  font-family: 'Hack Nerd Font Regular';
   font-size: 14px;
-  font-weight: 600;
+  font-weight: bold;
   min-height: 0;
 }
 
