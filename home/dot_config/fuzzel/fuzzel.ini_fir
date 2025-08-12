@@ -1,7 +1,12 @@
-font='FiraCode Nerd Font Mono':size=14
+font='Hack Nerd Font Regular':size=14
 icon-theme=Papirus-Dark
 prompt="> "
-show-actions=yes
+show-actions=no
+
+lines=14
+width=30
+horizontal-pad=40
+vertical-pad=20
 
 # https://github.com/catppuccin/fuzzel/blob/main/themes/catppuccin-mocha/lavender.ini
 [colors]
@@ -18,4 +23,5 @@ counter=7f849cff
 border=b4befeff
 
 [border]
+width=2
 radius=20

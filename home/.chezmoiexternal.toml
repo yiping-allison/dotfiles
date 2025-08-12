@@ -25,3 +25,7 @@ url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono
 [".local/share/fonts/Meslo.tar.xz"]
 type = "file"
 url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
+
+[".local/share/fonts/Hack.tar.xz"]
+type = "file"
+url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz"

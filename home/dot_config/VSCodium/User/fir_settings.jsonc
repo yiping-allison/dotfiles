@@ -6,10 +6,10 @@
   "terminal.integrated.minimumContrastRatio": 1,
   "window.titleBarStyle": "custom",
   "gopls": {},
-  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+  "workbench.productIconTheme": "Tabler",
 
-  "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
-  "editor.fontFamily": "'FiraCode Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font'",
+  "editor.fontFamily": "'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.guides.bracketPairs": true,
   "go.toolsManagement.autoUpdate": true,
@@ -50,18 +50,15 @@
     "editor.tabSize": 2
   },
   "git.openRepositoryInParentFolders": "never",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "catppuccin noctis icons",
 
   "telemetry.telemetryLevel": "off",
-  "aws.telemetry": false,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "anyscalecompute.ray-distributed-debugger.initialized": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "python.analysis.typeCheckingMode": "standard",
   "[go]": {
     "editor.insertSpaces": false,
     "editor.formatOnSave": true,
@@ -72,5 +69,6 @@
   "[postcss]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "catppuccin-noctis-icons.hidesExplorerArrows": false
 }

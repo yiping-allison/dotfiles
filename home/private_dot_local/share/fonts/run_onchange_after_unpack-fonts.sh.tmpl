@@ -4,7 +4,7 @@ set -ex pipefail
 
 {{ $home := .chezmoi.homeDir }}
 
-{{- range $font := list "FiraCode.tar.xz" "FiraCodeMono.tar.xz" "Meslo.tar.xz" -}}
+{{- range $font := list "FiraCode.tar.xz" "FiraCodeMono.tar.xz" "Meslo.tar.xz" "Hack.tar.xz" -}}
 
 {{ $file := joinPath $home ".local/share/fonts" $font }}
 # Hash: {{ include $file | sha256sum }}
