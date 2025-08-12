@@ -6,16 +6,22 @@
   "terminal.integrated.minimumContrastRatio": 1,
   "window.titleBarStyle": "custom",
   "gopls": {},
-  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+  "workbench.productIconTheme": "Tabler",
 
-  "terminal.integrated.fontFamily": "'MesloLGS Nerd Font'",
-  "editor.fontFamily": "'MesloLGS Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono'",
+  "editor.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.guides.bracketPairs": true,
   "go.toolsManagement.autoUpdate": true,
 
   "editor.indentSize": "tabSize",
   "editor.tabSize": 4,
+
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.iconTheme": "catppuccin noctis icons",
+  "catppuccin-noctis-icons.hidesExplorerArrows": false,
+
+  "telemetry.telemetryLevel": "off",
 
   "[tf]": {
     "editor.formatOnSave": true,
@@ -49,11 +55,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
-  "git.openRepositoryInParentFolders": "never",
-  "workbench.iconTheme": "material-icon-theme",
-
-  "telemetry.telemetryLevel": "off",
-  "aws.telemetry": false,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
