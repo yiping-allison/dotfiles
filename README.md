@@ -22,26 +22,8 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yiping-allison --ssh
 ```
 
 ```sh
-# Add a file as a template. This lets us have custom values per machine.
-chezmoi add --template {{FILE}}
-```
-
-```sh
-# Diff your working changes with existing
-chezmoi diff
-```
-
-```sh
 # Apply your working changes to dotfiles directory (i.e. Chezmoi source to ~/.config)
 chezmoi apply
-
-# Apply your working changes to dotfiles with refreshed externals
-chezmoi apply -R
-```
-
-```sh
-# Teleport to Chezmoi source
-chezmoi cd
 ```
 
 > [!IMPORTANT]
