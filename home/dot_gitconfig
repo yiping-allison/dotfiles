@@ -20,6 +20,14 @@
 
 [alias]
 	sync = !git switch main && git pull --prune && git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
+	l = log --graph --pretty=format:'%C(yellow)%H%Creset%nAuthor: %C(bold blue)%an <%ae>%Creset%nDate:   %C(green)%ad%Creset%n%n    %s%n' --date=iso
+	s = status
+	ap = add -p
+	a = add -A
+	c = commit -v
+	co = checkout
+	d = diff
+	b = branch
 
 [delta]
 	navigate = true
