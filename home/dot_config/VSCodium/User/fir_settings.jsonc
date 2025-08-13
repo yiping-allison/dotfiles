@@ -17,6 +17,12 @@
   "editor.indentSize": "tabSize",
   "editor.tabSize": 4,
 
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.iconTheme": "catppuccin noctis icons",
+  "catppuccin-noctis-icons.hidesExplorerArrows": false,
+
+  "telemetry.telemetryLevel": "off",
+
   "[tf]": {
     "editor.formatOnSave": true,
     "files.trimTrailingWhitespace": true,
@@ -49,10 +55,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
-  "git.openRepositoryInParentFolders": "never",
-  "workbench.iconTheme": "catppuccin noctis icons",
-
-  "telemetry.telemetryLevel": "off",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -69,6 +71,5 @@
   "[postcss]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "catppuccin-noctis-icons.hidesExplorerArrows": false
+  }
 }
