@@ -68,6 +68,15 @@ packages:
       key: vscodium.gpg
       keyfile_url: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
 
+    # https://wezterm.org/install/linux.html
+    wezterm:
+      source: https://apt.fury.io/wez
+      list: wezterm.list
+      distribution: '*'
+      component: '*'
+      key: wezterm-fury.gpg
+      keyfile_url: https://apt.fury.io/wez/gpg.key
+
   ubuntu:
     # sys utils
     - firejail
@@ -87,6 +96,7 @@ packages:
     - neovim
     - thefuck
     - codium
+    - wezterm
 
     # wayland utils
     - wl-clipboard

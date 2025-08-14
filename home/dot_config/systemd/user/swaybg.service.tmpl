@@ -1,8 +1,17 @@
+{{- $default := "" -}}
+{{- if eq .chezmoi.hostname "fir" }}
+{{- $default = "david-becker-cIffDN_GqoA-unsplash.jpg" }}
+{{- else if eq .chezmoi.hostname "birch" }}
+{{- $default = "wallpapersden_iceberg-minimalist.jpg" }}
+{{- else }}
+{{- $default = "wallpapersden_iceberg-minimalist.jpg" }}
+{{ end -}}
+
 [Unit]
 PartOf=graphical-session.target
 After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/swaybg -m fill -i "{{- .chezmoi.homeDir -}}/Pictures/wallpapers/wallpapersden_iceberg-minimalist.jpg"
+ExecStart=/usr/bin/swaybg -m fill -i "{{- .chezmoi.homeDir -}}/Pictures/wallpapers/{{ $default }}"
 Restart=on-failure
