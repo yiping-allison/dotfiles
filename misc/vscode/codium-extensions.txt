@@ -1,6 +1,7 @@
 4ops.terraform
 aaron-bond.better-comments
 alexdauenhauer.catppuccin-noctis-icons
+arrterian.nix-env-selector
 bradlc.vscode-tailwindcss
 catppuccin.catppuccin-vsc
 csstools.postcss
@@ -10,13 +11,16 @@ eamodio.gitlens
 editorconfig.editorconfig
 esbenp.prettier-vscode
 foxundermoon.shell-format
+github.copilot
 golang.go
 graphql.vscode-graphql
 graphql.vscode-graphql-syntax
 hashicorp.hcl
 hashicorp.terraform
+jnoortheen.nix-ide
 mikestead.dotenv
 mindaro-dev.file-downloader
+mkhl.direnv
 ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-python.black-formatter
@@ -30,6 +34,7 @@ ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
 ms-vscode.makefile-tools
 nefrob.vscode-just-syntax
+pinage404.nix-extension-pack
 pkief.material-icon-theme
 redhat.vscode-xml
 rust-lang.rust-analyzer
