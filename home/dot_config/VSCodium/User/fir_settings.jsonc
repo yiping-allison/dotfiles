@@ -5,14 +5,12 @@
   "editor.semanticHighlighting.enabled": true,
   "terminal.integrated.minimumContrastRatio": 1,
   "window.titleBarStyle": "custom",
-  "gopls": {},
   "workbench.productIconTheme": "Tabler",
 
   "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
   "editor.fontFamily": "'FiraCode Nerd Font Mono',monospace",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.guides.bracketPairs": true,
-  "go.toolsManagement.autoUpdate": true,
 
   "editor.indentSize": "tabSize",
   "editor.tabSize": 4,
@@ -22,6 +20,11 @@
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
 
   "telemetry.telemetryLevel": "off",
+
+  // Language extensions
+  "python.terminal.activateEnvironment": false,
+  "gopls": {},
+  "go.toolsManagement.autoUpdate": true,
 
   "[tf]": {
     "editor.formatOnSave": true,
