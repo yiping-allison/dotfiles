@@ -97,6 +97,7 @@ packages:
     - thefuck
     - codium
     - wezterm
+    - direnv
 
     # wayland utils
     - wl-clipboard
