@@ -119,6 +119,9 @@ packages:
     - tlrc
     - htop
 
+    # dev tools
+    - nix-direnv
+
   brew:
     # theme-ing
     - jandedobbeleer/oh-my-posh/oh-my-posh
