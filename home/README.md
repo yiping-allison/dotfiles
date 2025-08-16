@@ -59,13 +59,55 @@ Packages are installed using the following methods.
 
 - `apt`
 - `.deb`
+- `home-manager`
 - `brew`
 
-My method of preference is `apt` > `.deb` > `brew`.
+My method of preference is `apt` > `.deb` > `home-manager` > `brew`.
 
-Some developer tooling are installed via `brew` since they do not have the latest releases in `apt`, and I don't want to build them from source.
+Some developer tooling are installed via `home-manager (nix)` since they do not have the latest releases in `apt`, and I don't want to build them
+from source.
+The nice thing about `nix` is that the system was designed around reproducible builds/environments.
 
-Configuration can be found in [`packages.yaml`](./.chezmoidata/packages.yaml).
+The basic `home-manager` profile is already provided in [`dot_config/home-manager`](./dot_config/home-manager/).
+
+You need to install several things before attempting to access tooling managed by `home-manager`.
+
+Install `nix`.
+
+I recommend the [installer maintained by Determinate Systems](https://github.com/DeterminateSystems/nix-installer).
+
+```sh
+# Determinate nix
+curl -fsSL https://install.determinate.systems/nix | sh -s -- install --determinate
+
+# Upstream nix
+curl -fsSL https://install.determinate.systems/nix | sh -s -- install
+```
+
+Install `home-manager`.
+
+```sh
+# Flake variant
+nix run home-manager/release-25.05 -- init --switch
+```
+
+You can activate and build your configuration using the following command.
+
+```sh
+home-manager switch
+```
+
+Additional `home-manager` documentation can be found [here](https://nix-community.github.io/home-manager/index.xhtml#ch-nix-flakes).
+
+> [!TIP]
+> You might have noticed that `oh-my-posh` is still managed by `brew`.
+>
+> This is not a mistake.
+>
+> I wanted to have `oh-my-posh` widely available on machine initialization since
+> `nix` **is not** automatically installed through chezmoi scripts.
+
+You can find the list of installed packages in [`packages.yaml`](./.chezmoidata/packages.yaml).
 
 ### Wallpaper
 

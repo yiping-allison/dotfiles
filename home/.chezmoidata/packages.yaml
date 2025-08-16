@@ -113,14 +113,15 @@ packages:
     - policykit-1-gnome
     - libnotify-bin # mako dependency
 
-  brew:
+  nix:
     # sys utils
-    - htop
     - fzf
     - tlrc
-
-    # theme-ing
-    - jandedobbeleer/oh-my-posh/oh-my-posh
+    - htop
 
     # dev tools
-    - just
+    - nix-direnv
+
+  brew:
+    # theme-ing
+    - jandedobbeleer/oh-my-posh/oh-my-posh

@@ -19,6 +19,12 @@ if [[ -d $HOMEBREW_PREFIX ]]; then
 fi
 # homebrew end
 
+# nix home manager
+if [ -d "$HOME/.nix-profile/etc/profile.d" ]; then
+  source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+fi
+# nix home manager end
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
