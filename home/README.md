@@ -62,11 +62,12 @@ Packages are installed using the following methods.
 - `home-manager`
 - `brew`
 
-My method of preference is `apt` > `.deb` > `home-manager` > `brew`.
+My method of preference is `apt` > `home-manager` > `.deb` > `brew`.
 
-Some developer tooling are installed via `home-manager (nix)` since they do not have the latest releases in `apt`, and I don't want to build them
-from source.
-The nice thing about `nix` is that the system was designed around reproducible builds/environments.
+Most developer tooling are installed via `home-manager (nix)` since they do not have the latest releases in `apt`, and I don't want to build them
+from source manually.
+The nice thing about `nix` is that the system was designed around reproducible builds/environments. Most of the manual steps of building from source
+are already handled for you.
 
 The basic `home-manager` profile is already provided in [`dot_config/home-manager`](./dot_config/home-manager/).
 
