@@ -1,0 +1,19 @@
+[user]
+name = "Yiping (Allison)"
+email = "32723567+yiping-allison@users.noreply.github.com"
+
+[ui]
+color = "always"
+editor = "nvim"
+paginate = "auto"
+pager = "delta"
+diff-formatter = "delta"
+conflict-marker-style = "git"
+log-word-wrap = true
+
+[merge-tools.delta]
+# Silence 0 and 1 exit codes when using `delta`
+diff-expected-exit-codes = [0, 1]
+
+[templates]
+log = "builtin_log_compact"

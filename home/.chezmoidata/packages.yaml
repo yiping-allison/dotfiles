@@ -112,6 +112,7 @@ packages:
 
     # dev tools
     - nix-direnv
+    - jujutsu
 
   brew:
     # theme-ing
