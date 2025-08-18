@@ -2,7 +2,6 @@
 packages:
   dpkg:
     - https://github.com/akdor1154/gamescope-pkg/releases/download/v3.12.5-2/gamescope_3.12.5-2_amd64.deb
-    - https://github.com/str4d/rage/releases/download/v0.11.1/rage-musl_0.11.1-1_amd64.deb
 
   ppa:
     # https://eza.rocks/
@@ -41,15 +40,6 @@ packages:
       key: papirus-ubuntu-ppa.gpg
       keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446faf0df770bfc9ae58a9d36647cae7f
 
-    # https://apt.cli.rs/
-    rust-tools:
-      source: https://apt.cli.rs
-      list: rust-tools.list
-      distribution: all
-      component: main
-      key: rust-tools.gpg
-      keyfile_url: https://apt.cli.rs/pubkey.asc
-
     # https://github.com/netblue30/firejail
     firejail:
       source: https://ppa.launchpadcontent.net/deki/firejail/ubuntu
@@ -86,13 +76,9 @@ packages:
     - xclip
     - neofetch
     - eza
-    - bat-musl
-    - zoxide
-    - ripgrep
 
     # dev tools
     - git
-    - git-delta-musl
     - neovim
     - thefuck
     - codium
@@ -118,6 +104,11 @@ packages:
     - fzf
     - tlrc
     - htop
+    - bat
+    - delta
+    - ripgrep
+    - zoxide
+    - age
 
     # dev tools
     - nix-direnv
