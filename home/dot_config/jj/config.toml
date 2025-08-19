@@ -3,6 +3,7 @@ name = "Yiping (Allison)"
 email = "32723567+yiping-allison@users.noreply.github.com"
 
 [ui]
+default-command = "log"
 color = "always"
 editor = "nvim"
 paginate = "auto"
