@@ -5,7 +5,6 @@ arrterian.nix-env-selector
 bradlc.vscode-tailwindcss
 catppuccin.catppuccin-vsc
 csstools.postcss
-detachhead.basedpyright
 docker.docker
 eamodio.gitlens
 editorconfig.editorconfig
