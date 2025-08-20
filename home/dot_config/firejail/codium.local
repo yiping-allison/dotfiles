@@ -1,5 +1,2 @@
 # Allow access to host network
 net host
-
-# Allow access to pnpm
-noblacklist ${HOME}/.local/share/pnpm
