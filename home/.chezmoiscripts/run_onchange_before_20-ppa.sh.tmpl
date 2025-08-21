@@ -8,7 +8,7 @@ warn()    { echo -e "\033[1;33m[WARN]\033[0m $*"; }
 error()   { echo -e "\033[1;31m[ERROR]\033[0m $*"; }
 success() { echo -e "\033[1;32m✅ $*\033[0m"; }
 
-{{ if eq .chezmoi.osRelease.id "pop" }}
+{{ if eq .chezmoi.osRelease.id "pop" -}}
 # Preparation for PPAs
 sudo apt update
 sudo apt install -y gpg
@@ -16,9 +16,9 @@ sudo mkdir -p /etc/apt/keyrings
 
 {{ range .packages.ppa -}}
 
-{{ $keyring_path := "" }}
-{{ if and .key .keyfile_url }}
-{{ $keyring_path = joinPath "/etc" "apt" "keyrings" .key }}
+{{ $keyring_path := "" -}}
+{{ if and .key .keyfile_url -}}
+{{ $keyring_path = joinPath "/etc" "apt" "keyrings" .key -}}
 KEYRING={{ $keyring_path | quote }}
 if [ ! -f "$KEYRING" ]; then
     info "Adding PPA key for {{ .source }}..."
@@ -28,28 +28,29 @@ if [ ! -f "$KEYRING" ]; then
 else
     warn "PPA key for {{ .source }} already exists."
 fi
-{{ end }}
+{{- end }}
 
-{{ $source_list := joinPath "/etc" "apt" "sources.list.d" .list }}
+{{- $source_list := joinPath "/etc" "apt" "sources.list.d" .list }}
 SOURCE={{ $source_list | quote }}
 if [ ! -f "$SOURCE" ]; then
     info "Adding PPA source for {{ .source }}..."
-    {{ $source_parts := list "deb" }}
-    {{ if $keyring_path }}
-        {{ $source_parts = append $source_parts (printf "[signed-by=%s]" $keyring_path) }}
-    {{ end }}
-    {{ $source_parts = append $source_parts .source }}
-    {{ $source_parts = append $source_parts .distribution }}
-    {{ $source_parts = append $source_parts .component }}
-    {{ $source := $source_parts | join " " }}
+    {{- $source_parts := list "deb" -}}
+    {{- if $keyring_path -}}
+        {{- $source_parts = append $source_parts (printf "[signed-by=%s]" $keyring_path) -}}
+    {{- end }}
+    {{- $source_parts = append $source_parts .source -}}
+    {{- $source_parts = append $source_parts .distribution -}}
+    {{- $source_parts = append $source_parts .component -}}
+    {{- $source := $source_parts | join " " }}
     echo {{ $source | quote }} | sudo tee "$SOURCE"
     sudo chmod 644 "$SOURCE"
     success "PPA source for {{ .source }} added successfully."
 else
     warn "PPA source for {{ .source }} already exists."
 fi
-
 success "PPA {{ .source }} configured successfully."
-{{- end }}
+
 
 {{ end }}
+
+{{- end }}
