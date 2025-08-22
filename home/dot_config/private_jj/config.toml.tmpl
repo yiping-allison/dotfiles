@@ -1,6 +1,6 @@
 [user]
-name = "Yiping (Allison)"
-email = "32723567+yiping-allison@users.noreply.github.com"
+name = {{ .name | quote }}
+email = {{ .email | quote }}
 
 [ui]
 default-command = "log"

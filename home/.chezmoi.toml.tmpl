@@ -1,3 +1,10 @@
+{{- $email := "32723567+yiping-allison@users.noreply.github.com" -}}
+{{- $name := "Yiping (Allison)" -}}
+
+[data]
+name = {{ $name | quote }}
+email = {{ $email | quote }}
+
 [template]
 # Needed to allow optional parameters in templates.
 # https://www.chezmoi.io/reference/templates/

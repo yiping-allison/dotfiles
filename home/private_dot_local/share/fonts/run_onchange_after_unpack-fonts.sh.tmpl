@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.os "linux" -}}
 #!/bin/sh
 
 set -ex pipefail
@@ -13,3 +14,5 @@ tar xf {{ $file | quote }} --one-top-level
 {{- end }}
 
 fc-cache -f
+
+{{- end }}

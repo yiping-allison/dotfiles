@@ -1,0 +1,40 @@
+##############
+# oh-my-zsh
+##############
+[".oh-my-zsh"]
+type = "git-repo"
+url = "https://github.com/ohmyzsh/ohmyzsh.git"
+refreshPeriod = "168h" # in hours (1 week)
+
+[".omz/plugins/fzf-tab"]
+type = "git-repo"
+url = "https://github.com/Aloxaf/fzf-tab.git"
+refreshPeriod = "168h"
+
+##############
+# fonts
+##############
+{{- $prefix := "" -}}
+{{- $fileType := "" -}}
+{{- if eq .chezmoi.os "linux" -}}
+{{- $prefix = ".local/share/fonts" -}}
+{{- $fileType = ".tar.xz" -}}
+{{- else if eq .chezmoi.os "darwin" -}}
+{{- $prefix = "Library/Fonts" -}}
+{{- $fileType = ".zip" -}}
+{{- end }}
+[{{ joinPath $prefix (printf "FiraCode%s" $fileType) | quote }}]
+type = "file"
+url = {{ printf "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode%s" $fileType| quote }}
+
+[{{ joinPath $prefix (printf "FiraCodeMono%s" $fileType) | quote }}]
+type = "file"
+url = {{ printf "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono%s" $fileType | quote }}
+
+[{{ joinPath $prefix (printf "Meslo%s" $fileType) | quote }}]
+type = "file"
+url = {{ printf "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo%s" $fileType | quote }}
+
+[{{ joinPath $prefix (printf "Hack%s" $fileType) | quote }}]
+type = "file"
+url = {{ printf "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack%s" $fileType | quote }}
