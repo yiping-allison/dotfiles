@@ -1,0 +1,16 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+
+set -ex pipefail
+
+{{ $home := .chezmoi.homeDir }}
+
+{{- range $font := list "FiraCode.zip" "FiraCodeMono.zip" "Meslo.zip" "Hack.zip" -}}
+
+{{ $file := joinPath $home "Library/Fonts" $font }}
+# Hash: {{ include $file | sha256sum }}
+unzip $file -d {{ joinPath $home "Library/Fonts" }}
+
+{{- end }}
+
+{{- end }}

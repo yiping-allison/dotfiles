@@ -4,6 +4,7 @@ alexdauenhauer.catppuccin-noctis-icons
 arrterian.nix-env-selector
 bradlc.vscode-tailwindcss
 catppuccin.catppuccin-vsc
+charliermarsh.ruff
 csstools.postcss
 docker.docker
 eamodio.gitlens
