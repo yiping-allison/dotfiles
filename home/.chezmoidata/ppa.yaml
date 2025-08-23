@@ -62,6 +62,7 @@ ppa:
     key: wezterm-fury.gpg
     keyfile_url: https://apt.fury.io/wez/gpg.key
 
+  # https://docs.doppler.com/docs/install-cli
   doppler:
     source: https://packages.doppler.com/public/cli/deb/debian
     list: doppler-cli.list
