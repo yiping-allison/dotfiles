@@ -61,3 +61,11 @@ ppa:
     component: "*"
     key: wezterm-fury.gpg
     keyfile_url: https://apt.fury.io/wez/gpg.key
+
+  doppler:
+    source: https://packages.doppler.com/public/cli/deb/debian
+    list: doppler-cli.list
+    distribution: any-version
+    component: main
+    key: doppler.gpg
+    keyfile_url: https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key
