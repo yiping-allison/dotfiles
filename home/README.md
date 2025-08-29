@@ -12,10 +12,6 @@ Notes that may be semi-helpful.
 
 All fonts are [Nerd Font variants](https://www.nerdfonts.com/font-downloads).
 
-- MesloLG
-- FiraCode
-- FiraMono
-
 Configuration can be found in [`private_dot_local/.../fonts`](./private_dot_local/share/fonts/).
 
 ### Unique dots
