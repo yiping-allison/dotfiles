@@ -19,7 +19,14 @@
   "workbench.iconTheme": "catppuccin noctis icons",
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
 
+  // Telemetry
   "telemetry.telemetryLevel": "off",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.feedback.enabled": false,
+  "update.enableWindowsBackgroundUpdates": true,
+  "update.mode": "autoUpdate",
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
 
   // Language extensions
   "python.terminal.activateEnvironment": false,

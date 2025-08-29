@@ -1,4 +1,5 @@
-{{- if eq .chezmoi.hostname "fir" }}
+{{- if eq .chezmoi.hostname "fir" -}}
+
 # local bin
 export PATH=$HOME/.local/bin:$PATH
 # local bin end
@@ -25,7 +26,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # rust end
 
 . "$HOME/.cargo/env"
-{{- else if eq .chezmoi.hostname "birch" }}
+
+{{- else if eq .chezmoi.hostname "birch" -}}
+
 # local bin
 export PATH=$HOME/.local/bin:$PATH
 # local bin end
@@ -47,4 +50,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
 {{- end }}

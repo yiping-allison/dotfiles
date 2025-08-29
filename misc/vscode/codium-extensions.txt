@@ -6,6 +6,7 @@ bradlc.vscode-tailwindcss
 catppuccin.catppuccin-vsc
 charliermarsh.ruff
 csstools.postcss
+detachhead.basedpyright
 docker.docker
 eamodio.gitlens
 editorconfig.editorconfig
