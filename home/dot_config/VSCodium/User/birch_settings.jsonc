@@ -21,10 +21,8 @@
 
   // Telemetry
   "telemetry.telemetryLevel": "off",
-  "telemetry.enableCrashReporter": false,
   "telemetry.feedback.enabled": false,
-  "update.enableWindowsBackgroundUpdates": true,
-  "update.mode": "autoUpdate",
+  "update.mode": "default",
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
 

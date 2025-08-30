@@ -3,3 +3,7 @@ net host
 
 # Allow access to pnpm
 noblacklist ${HOME}/.local/share/pnpm
+
+# Allow /tmp directory execution
+# Needed to run tests within the editor
+ignore noexec /tmp
