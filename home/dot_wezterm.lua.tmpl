@@ -26,7 +26,16 @@ config.enable_wayland = false
 
 -- Plugins
 local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
-workspace_switcher.zoxide_path = {{ joinPath "/usr" "bin" "zoxide" | quote }}
+local function get_command_output(cmd)
+    local handle = io.popen(cmd)
+    if handle then
+        local result = handle:read("*a")
+        handle:close()
+        return result:gsub("%s+$", "")
+    end
+    return nil
+end
+workspace_switcher.zoxide_path = get_command_output("command -v zoxide")
 
 -- Set main keybinding key to "CTRL + p"
 config.leader = { key='p', mods='CTRL', timeout_milliseconds=1000 }
@@ -114,7 +123,7 @@ wezterm.on('gui-startup', function(cmd)
             args = { 'powershell.exe', '-NoLogo' }
         else
             -- Assume anything else just uses zsh
-            args = { '/bin/zsh', '-l' }
+            args = { '/usr/bin/env', 'zsh' }
         end
     end
 
@@ -127,8 +136,7 @@ end)
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.default_prog = { 'powershell.exe', '-NoLogo' }
 else
-    args = { '/bin/zsh', '-l' }
+    args = { '/usr/bin/env', 'zsh' }
 end
 
 return config
-
