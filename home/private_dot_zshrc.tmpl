@@ -131,6 +131,22 @@ fi
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 HIST_STAMPS="mm/dd/yyyy"
+# Number of commands to be kept in memory.
+HISTSIZE=1000
+# Number of commands to be saved on disk in `~/.zsh_history`.
+SAVEHIST=1000
+# Expire a duplicate event first when trimming history.
+setopt HIST_EXPIRE_DUPS_FIRST
+# Delete an old recorded event if a new event is a duplicate.
+setopt HIST_IGNORE_ALL_DUPS
+# Do not save duplicate commands to history.
+setopt HIST_IGNORE_DUPS
+# Do not write a duplicate event to the history file.
+setopt HIST_SAVE_NO_DUPS
+# Do not find duplicate commands when searching.
+setopt HIST_FIND_NO_DUPS
+# Share history between all sessions.
+setopt SHARE_HISTORY
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ! NOTE: We have to set this to a custom location so we don't confuse chezmoi with overwriting an external source.
@@ -146,12 +162,6 @@ plugins=(git eza thefuck direnv)
 if [[ -d "$NIX_PREFIX/bin" ]]; then
   plugins+=(zoxide fzf fzf-tab)
 fi
-
-# Additional completions.
-# ! NOTE: If you add a new completion, you may need to refresh `.zcompdump` to make it available.
-# You can find the file using `echo $ZSH_COMPDUMP`.
-# Remove the file and reload: `omz reload`.
-fpath=($HOME/.zsh/completions $fpath)
 
 # Ripgrep config
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
