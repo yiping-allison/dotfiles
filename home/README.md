@@ -94,6 +94,17 @@ You can activate and build your configuration using the following command.
 home-manager switch
 ```
 
+> [!TIP]
+> You many notice that `home-manager` follows nix unstable. This is so you can have the latest versions
+> of packages as long as the pinned version is updated in the unstable branch.
+> You can update an existing package using the following commands:
+>
+> ```sh
+> cd ~/.config/home-manager
+> nix flake update
+> home-manager switch
+> ```
+
 Additional `home-manager` documentation can be found [here](https://nix-community.github.io/home-manager/index.xhtml#ch-nix-flakes).
 
 > [!TIP]
@@ -164,7 +175,7 @@ Prefix is set to `Ctrl-p`.
 
 Main shell used is `zsh`.
 
-Custom configurations can be found in [`dot_omz`](./dot_omz/), [`dot_zsh`](./dot_zsh/), and
+Custom configurations can be found in [`dot_omz`](./dot_omz/) and
 [`dot_zshrc`](dot_zshrc.tmpl).
 
 There may be times when you manually update non-custom `zsh` configuration like completions.
@@ -183,12 +194,12 @@ rm $ZSH_COMPDUMP
 omz reload
 ```
 
-### `git`
+### `git` and `jj`
 
-Configuration can be found in [`dot_gitconfig`](dot_gitconfig).
+Configuration can be found in [`dot_gitconfig.tmpl`](dot_gitconfig.tmpl) and [`private_jj`](./dot_config/private_jj/).
 
-> [!TIP]
-> Update name and email.
+> [!IMPORTANT]
+> Update the name and email in [`.chezmoi.toml.tmpl`](.chezmoi.toml.tmpl).
 
 ### VSCode
 
