@@ -1,4 +1,22 @@
 ppa:
+  # https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+  docker:
+    source: https://download.docker.com/linux/ubuntu
+    list: docker.list
+    distribution: jammy
+    component: stable
+    key: docker.asc
+    keyfile_url: https://download.docker.com/linux/ubuntu/gpg
+
+  # https://docs.doppler.com/docs/install-cli
+  doppler:
+    source: https://packages.doppler.com/public/cli/deb/debian
+    list: doppler-cli.list
+    distribution: any-version
+    component: main
+    key: doppler.gpg
+    keyfile_url: https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key
+  
   # https://eza.rocks/
   eza:
     source: http://deb.gierens.de
@@ -7,6 +25,15 @@ ppa:
     component: main
     key: gierens.gpg
     keyfile_url: https://raw.githubusercontent.com/eza-community/eza/main/deb.asc
+
+  # https://github.com/netblue30/firejail
+  firejail:
+    source: https://ppa.launchpadcontent.net/deki/firejail/ubuntu
+    list: firejail-ppa-jammy.list
+    distribution: jammy
+    component: main
+    key: firejail-ppa.gpg
+    keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x0b58929c0081a52410e8992260537cdcf684460c
 
   # https://launchpad.net/~git-core/+archive/ubuntu/ppa
   git-core:
@@ -35,15 +62,6 @@ ppa:
     key: papirus-ubuntu-ppa.gpg
     keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446faf0df770bfc9ae58a9d36647cae7f
 
-  # https://github.com/netblue30/firejail
-  firejail:
-    source: https://ppa.launchpadcontent.net/deki/firejail/ubuntu
-    list: firejail-ppa-jammy.list
-    distribution: jammy
-    component: main
-    key: firejail-ppa.gpg
-    keyfile_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x0b58929c0081a52410e8992260537cdcf684460c
-
   # https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo
   vscodium:
     source: https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs
@@ -61,12 +79,3 @@ ppa:
     component: "*"
     key: wezterm-fury.gpg
     keyfile_url: https://apt.fury.io/wez/gpg.key
-
-  # https://docs.doppler.com/docs/install-cli
-  doppler:
-    source: https://packages.doppler.com/public/cli/deb/debian
-    list: doppler-cli.list
-    distribution: any-version
-    component: main
-    key: doppler.gpg
-    keyfile_url: https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key
