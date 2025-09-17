@@ -41,6 +41,7 @@ redhat.vscode-xml
 rust-lang.rust-analyzer
 streetsidesoftware.code-spell-checker
 tamasfe.even-better-toml
+visualjj.visualjj
 vscodevim.vim
 wayou.vscode-todo-highlight
 zguolee.tabler-icons
