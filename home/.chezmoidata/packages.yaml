@@ -5,22 +5,27 @@ packages:
 
   ubuntu:
     # sys utils
+    - brightnessctl
+    - eza
     - firejail
     - firejail-profiles
-    - brightnessctl
+    - neofetch
     - pavucontrol
     - xclip
-    - neofetch
-    - eza
 
     # dev tools
+    - codium
+    - containerd.io # docker dependency
+    - direnv
+    - docker-buildx-plugin # docker dependency
+    - docker-ce # docker dependency
+    - docker-ce-cli # docker dependency
+    - docker-compose-plugin # docker dependency
+    - doppler
     - git
     - neovim
     - thefuck
-    - codium
     - wezterm
-    - direnv
-    - doppler
 
     # wayland utils
     - wl-clipboard
@@ -30,26 +35,26 @@ packages:
     - papirus-icon-theme
 
     # niri
-    - waybar
+    - libnotify-bin # mako dependency
+    - policykit-1-gnome
     - swaybg
     - swayidle
-    - policykit-1-gnome
-    - libnotify-bin # mako dependency
+    - waybar
 
   nix:
     # sys utils
-    - fzf
-    - tlrc
-    - htop
+    - age
     - bat
     - delta
+    - fzf
+    - htop
     - ripgrep
+    - tlrc
     - zoxide
-    - age
 
     # dev tools
-    - nix-direnv
     - jujutsu
+    - nix-direnv
 
   brew:
     # theme-ing

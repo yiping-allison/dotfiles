@@ -65,7 +65,7 @@ from source manually.
 The nice thing about `nix` is that the system was designed around reproducible builds/environments. Most of the manual steps of building from source
 are already handled for you.
 
-The basic `home-manager` profile is already provided in [`dot_config/home-manager`](./dot_config/home-manager/).
+The basic `home-manager` profile is already provided in [`dot_config/private_home-manager`](./dot_config/private_home-manager/).
 
 You need to install several things before attempting to access tooling managed by `home-manager`.
 
@@ -175,8 +175,8 @@ Prefix is set to `Ctrl-p`.
 
 Main shell used is `zsh`.
 
-Custom configurations can be found in [`dot_omz`](./dot_omz/) and
-[`dot_zshrc`](dot_zshrc.tmpl).
+Custom configurations can be found in [`private_dot_omz`](./private_dot_omz/) and
+[`private_dot_zshrc`](private_dot_zshrc.tmpl).
 
 There may be times when you manually update non-custom `zsh` configuration like completions.
 Since I am using `oh-my-zsh`, you may need to manually refresh omz's cache.
