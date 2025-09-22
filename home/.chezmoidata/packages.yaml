@@ -54,6 +54,7 @@ packages:
 
     # dev tools
     - jujutsu
+    - just
     - nix-direnv
 
   brew:
