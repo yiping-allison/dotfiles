@@ -45,9 +45,9 @@ Check [`.chezmoiignore.tmpl`](.chezmoiignore.tmpl) for the updated list.
 
 > [!IMPORTANT]
 > If you're pulling my configs, this is set to automatically include my public github keys.
-> You probably want to remove and replace them with your own.
+> You probably want to replace them with your own.
 
-Configuration can be found in [`private_dot_ssh`](./private_dot_ssh/).
+Configuration can be updated in [`.chezmoi.toml.tmpl`](.chezmoi.toml.tmpl) under `gitUser`.
 
 ### Packages
 
