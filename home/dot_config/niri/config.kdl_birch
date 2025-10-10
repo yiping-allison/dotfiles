@@ -404,7 +404,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Custom binds
-    Mod+Return repeat=false hotkey-overlay-title="Run an Application: Zen Browser" { spawn "flatpak" "run" "app.zen_browser.zen"; }
+    Mod+Return repeat=false hotkey-overlay-title="Run an Application: Zen Browser" { spawn "zen"; }
     Mod+Shift+P repeat=false hotkey-overlay-title="Run an Application: 1Password" { spawn "1password"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
