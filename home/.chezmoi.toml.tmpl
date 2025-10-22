@@ -1,11 +1,13 @@
-{{- $email := "32723567+yiping-allison@users.noreply.github.com" -}}
-{{- $name := "Yiping (Allison)" -}}
-{{- $gitUser := "yiping-allison" -}}
+{{- $email := promptStringOnce . "email" "What is your email?" "32723567+yiping-allison@users.noreply.github.com" -}}
+{{- $name := promptStringOnce . "name" "What is your name?" "Yiping (Allison)" -}}
+{{- $gitUser := promptStringOnce . "gitUser" "What is your git user handle?" "yiping-allison" -}}
+{{- $waylandDisplay := promptStringOnce . "waylandDisplay" "What is your wayland display?" "0" -}}
 
 [data]
 name = {{ $name | quote }}
 email = {{ $email | quote }}
 gitUser = {{ $gitUser | quote }}
+waylandDisplay = {{ $waylandDisplay | quote }}
 
 [template]
 # Needed to allow optional parameters in templates.

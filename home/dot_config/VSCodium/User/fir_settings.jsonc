@@ -1,20 +1,23 @@
 {
-  // Theme settings
+  // Theme related settings
   // See https://github.com/catppuccin/vscode.
   "workbench.colorTheme": "Catppuccin Macchiato",
-  "editor.semanticHighlighting.enabled": true,
-  "terminal.integrated.minimumContrastRatio": 1,
-  "window.titleBarStyle": "custom",
   "workbench.productIconTheme": "Tabler",
-
+  "window.titleBarStyle": "custom",
   "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
-  "editor.fontFamily": "'FiraCode Nerd Font Mono',monospace",
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.guides.bracketPairs": true,
+  "terminal.integrated.minimumContrastRatio": 1,
 
+  // Editor settings
   "editor.indentSize": "tabSize",
   "editor.tabSize": 4,
+  "editor.guides.bracketPairs": true,
+  "editor.fontFamily": "'FiraCode Nerd Font Mono',monospace",
+  "editor.semanticHighlighting.enabled": true,
 
+  // Security settings
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // Extension settings
   "git.openRepositoryInParentFolders": "never",
   "workbench.iconTheme": "catppuccin noctis icons",
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
@@ -89,5 +92,12 @@
     },
     "editor.wordBasedSuggestions": "off",
     "gitlens.codeLens.symbolScopes": ["!Module"]
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "[toml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   }
 }

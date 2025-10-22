@@ -17,6 +17,9 @@ noblacklist ${RUNUSER}/psd/*zen*
 noblacklist ${RUNUSER}/*firefox*
 noblacklist ${RUNUSER}/psd/*firefox*
 
+# Allow Wayland socket
+noblacklist ${RUNUSER}/wayland-{{- .waylandDisplay }}
+
 blacklist /usr/libexec
 
 mkdir ${HOME}/.cache/zen
@@ -28,6 +31,8 @@ whitelist ${RUNUSER}/*zen*
 whitelist ${RUNUSER}/psd/*zen*
 whitelist ${RUNUSER}/*firefox*
 whitelist ${RUNUSER}/psd/*firefox*
+
+whitelist ${RUNUSER}/wayland-{{- .waylandDisplay }}
 
 # Note: Firefox requires a shell to launch on Arch and Fedora.
 # Add the next lines to firefox.local to enable private-bin.

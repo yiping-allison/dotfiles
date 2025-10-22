@@ -2,7 +2,7 @@
 Name=Zen
 Icon=zen-browser
 Comment=Minimalist web browser
-Exec=firejail zen
+Exec=/usr/bin/firejail /usr/local/bin/zen %U
 Terminal=false
 Type=Application
 StartupWMClass=zen
