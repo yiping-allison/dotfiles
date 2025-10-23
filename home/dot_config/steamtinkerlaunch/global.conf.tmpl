@@ -69,11 +69,11 @@ BOXTRONCMD="/usr/share/boxtron/run-dosbox"
 ## The command line arguments used for Boxtron
 BOXTRONARGS="--wait-before-run"
 ## The Roberta executable
-ROBERTACMD="/home/allison/.steam/debian-installation/compatibilitytools.d/roberta/run-vm"
+ROBERTACMD="{{- .chezmoi.homeDir -}}/.steam/debian-installation/compatibilitytools.d/roberta/run-vm"
 ## The command line arguments used for Roberta
 ROBERTAARGS="--wait-before-run"
 ## The Luxtorpeda executable
-LUXTORPEDACMD="/home/allison/.steam/debian-installation/compatibilitytools.d/luxtorpeda/luxtorpeda.sh"
+LUXTORPEDACMD="{{- .chezmoi.homeDir -}}/.steam/debian-installation/compatibilitytools.d/luxtorpeda/luxtorpeda.sh"
 ## The command line arguments used for Luxtorpeda
 LUXTORPEDAARGS="wait-before-run"
 ## Allow download of ReShade source files
@@ -219,7 +219,7 @@ SGDBAUTODL="none"
 ## Create a GameTitle symlink in 'STLCOMPDAT' for finding a WINEPREFIX easier
 STORECOMPDATTITLE="1"
 ## Custom Conty executable
-CUSTCONTY="/home/allison/none"
+CUSTCONTY="{{- .chezmoi.homeDir -}}/none"
 ## Update downloaded Conty automatically
 UPDATECONTY="1"
 ## Log the time played per game
@@ -241,7 +241,7 @@ USEMO2PROTON="none"
 ## enable using a custom selected ModOrganizer 2 installer executable
 USEMO2CUSTOMINSTALLER="0"
 ## path to a custom ModOrganizer 2 installer executable (for example, a custom or development build) to use in place of downloading from GitHub
-MO2CUSTOMINSTALLER="/home/allison/none"
+MO2CUSTOMINSTALLER="{{- .chezmoi.homeDir -}}/none"
 ## The compatdata directory for HedgeModManager to run inside of
 HMMCOMPDATA="STLCFGDIR/hedgemodmanager/compatdata"
 ## The Proton version used to run HedgeModManager
