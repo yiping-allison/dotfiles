@@ -1,22 +1,25 @@
 {
-  // Theme settings
+  // Theme related settings
   // See https://github.com/catppuccin/vscode.
   "workbench.colorTheme": "Catppuccin Macchiato",
-  "editor.semanticHighlighting.enabled": true,
-  "terminal.integrated.minimumContrastRatio": 1,
-  "window.titleBarStyle": "custom",
+  "workbench.iconTheme": "catppuccin noctis icons",
   "workbench.productIconTheme": "Tabler",
-
+  "window.titleBarStyle": "custom",
   "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono'",
-  "editor.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.guides.bracketPairs": true,
+  "terminal.integrated.minimumContrastRatio": 1,
 
+  // Editor settings
   "editor.indentSize": "tabSize",
   "editor.tabSize": 4,
+  "editor.guides.bracketPairs": true,
+  "editor.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
+  "editor.semanticHighlighting.enabled": true,
 
+  // Security settings
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // Extension settings
   "git.openRepositoryInParentFolders": "never",
-  "workbench.iconTheme": "catppuccin noctis icons",
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
 
   // Telemetry
@@ -82,6 +85,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[toml]": {
-    "editor.defaultFormatter": "bodil.prettier-toml"
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   }
 }

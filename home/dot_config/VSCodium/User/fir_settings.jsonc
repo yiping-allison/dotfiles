@@ -2,6 +2,7 @@
   // Theme related settings
   // See https://github.com/catppuccin/vscode.
   "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin noctis icons",
   "workbench.productIconTheme": "Tabler",
   "window.titleBarStyle": "custom",
   "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
@@ -19,7 +20,6 @@
 
   // Extension settings
   "git.openRepositoryInParentFolders": "never",
-  "workbench.iconTheme": "catppuccin noctis icons",
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
 
   // Telemetry
