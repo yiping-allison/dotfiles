@@ -105,6 +105,12 @@ home-manager switch
 > home-manager switch
 > ```
 
+> [!IMPORTANT]
+> Make sure to re-add `flake.lock` to Chezmoi after using `nix flake update`, and commit it to source control.
+> ```sh
+> chezmoi add flake.lock
+> ```
+
 Additional `home-manager` documentation can be found [here](https://nix-community.github.io/home-manager/index.xhtml#ch-nix-flakes).
 
 > [!TIP]

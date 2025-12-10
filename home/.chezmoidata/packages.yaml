@@ -42,7 +42,7 @@ packages:
     - waybar
 
   nix:
-    # sys utils
+    # cli utils
     - age
     - bat
     - delta
@@ -50,6 +50,7 @@ packages:
     - htop
     - ripgrep
     - tlrc
+    - trash-cli
     - zoxide
 
     # dev tools
