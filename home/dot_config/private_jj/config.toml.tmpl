@@ -18,3 +18,10 @@ diff-expected-exit-codes = [0, 1]
 
 [templates]
 log = "builtin_log_compact"
+git_push_bookmark = '"allisu/push-" ++ change_id.short()'
+
+[remotes.origin]
+auto-track-bookmarks = "main"
+
+[remotes.upstream]
+auto-track-bookmarks = "main"
