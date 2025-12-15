@@ -25,3 +25,11 @@ auto-track-bookmarks = "main"
 
 [remotes.upstream]
 auto-track-bookmarks = "main"
+
+[aliases]
+# Moves the closest ancestor bookmark to the current change
+# https://github.com/jj-vcs/jj/discussions/5568#discussioncomment-12045803
+tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
+
+[revset-aliases]
+"closest_bookmark(to)" = "heads(::to & bookmarks())"
