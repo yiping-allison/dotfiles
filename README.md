@@ -1,5 +1,9 @@
 # Dotfiles
 
+> [!WARNING]
+> Migrated to [Gitea](https://gitea.com/allisu/dotfiles).
+
+
 ![os](https://img.shields.io/badge/os-Pop!__OS%2022.04-blue) ![chezmoi](https://img.shields.io/badge/chezmoi-%3E%3D%20v2.63.1-orange)
 
 A repository to store dotfiles.
